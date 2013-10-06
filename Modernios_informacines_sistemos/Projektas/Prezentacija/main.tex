@@ -6,6 +6,7 @@
 \usepackage{caption}
 \usepackage{subfig}
 \usepackage{graphicx}
+\usepackage{listings}
 
 \newcommand*\oldmacro{}
 \let\oldmacro\insertshortinstitute % save previous definition
@@ -40,10 +41,165 @@
     \titlepage
   \end{frame}
 
-  \begin{frame}{Įžanga}
+  \begin{frame}{Susipažinimas}
     \begin{itemize}
-      \item Foo
+      \item Programuotojas@Ruptela
+      \item Projektai:
+      \begin{itemize}
+        \item Žmogaus eisenos atpažinimas
+        \item Parkinsono ligos atpažinimas
+        \item Akcijų biržos analitikų spėjimų analizė;
+      \end{itemize}
     \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Istorija}
+    \begin{itemize}
+      \item Google parašė popierių apie MapReduse \cite{Dean:2008:MSD:1327452.1327492};
+      \item Doug Cutting and Mike Cafarella 2005 išleido pirmą Hadoop versiją Java pagrindu;
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Hadoop}
+    \begin{center}
+      \includegraphics[width=50px]{img/hadoop.png}
+    \end{center}
+    \begin{itemize}
+      \item Kas yra Hadoop?
+      \begin{itemize}
+        \item Norima atlikti kažkokius skaičiavimus su daug, \textit{daug} duomenų;
+        \item Labai maži skaičiavimo resursai (keli seni kompiuteriai, renkantis dulkes ofiso kampe);
+      \end{itemize}
+      \item Susideda:
+      \begin{itemize}
+        \item HDFS
+        \item MapReduce
+      \end{itemize}
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{HDFS}
+    \begin{itemize}
+      \item Reali bylų sistema, parašyta Java pagrindu;
+      \item Hadoop Distribuded File System;
+      \item Lanksti masto didinime (angl. \textit{scalability});
+      \item Pateikti pavyzdį ant lentos;
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{MapReduce}
+    \begin{itemize}
+      \item Lengvas sprendimas, norint apdoroti didelius duomenys su daug procesorių;
+      \item Pagrindiniai tikslai, realizacijos metu:
+      \begin{itemize}
+        \item Klaidų tolerancija;
+        \item Lanksti masto didinime (angl. \textit{scalability});
+        \item Automatinis lygiagretumas ir paskirstymas;
+      \end{itemize}
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Programavimo modelis}
+    \begin{itemize}
+      \item I/O -- key/value rinkinys
+      \begin{itemize}
+        \item $<key,~value>$;
+        \item $<userId,~profile>$;
+        \item $<timestamp,~log~entry>$;
+      \end{itemize}
+      \item Programavimas vyksta naudojant dvi primityvias funkcijas
+      \begin{itemize}
+        \item map (in\_key, in\_value) $\rightarrow$ list(out\_key, intermediate\_value)
+        \item reduce (out\_key, list(intermediate\_value)) $\rightarrow$ list(out\_value)
+      \end{itemize}
+      \item Pateikti pavyzdį ant lentos;
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Privalumai}
+    \begin{itemize}
+      \item Labai paprastas ir lengvas naudoti;
+      \item Jokios priklausomybės nuo schemos ir duomenų tipų;
+      \item Jokio skirtumo nuo duomenų talpinimo lygio;
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Trūkumai}
+    \begin{itemize}
+      \item MapReduce nėra aukšto lygio programavimo modelis;
+      \item Jokios schemos ir indeksų;
+      \item Mažas efektyvumas I/O pagrindu;
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}[allowframebreaks=0.8]{Ekosistema}
+    \begin{columns}
+      \begin{column}{0.3\textwidth}
+        \begin{itemize}
+          \item Pig
+          \item DataFlow
+        \end{itemize}
+        \includegraphics[width=100px]{img/yahoopig.jpeg}
+      \end{column}
+      \begin{column}{0.3\textwidth}
+        \begin{itemize}
+          \item Hive
+          \item SQL
+        \end{itemize}
+        \includegraphics[width=100px]{img/hive.png}
+        \vspace{45px}
+      \end{column}
+      \begin{column}{0.3\textwidth}
+        \begin{itemize}
+          \item Sqoop
+          \item RDBMS
+        \end{itemize}
+        \includegraphics[width=100px]{img/sqoop.png}
+        \vspace{110px}
+      \end{column}
+    \end{columns}
+
+    \begin{itemize}
+      \item Mahout
+      \item Klasterizavimas, Savybių skaičiavimas
+    \end{itemize}
+    \begin{center}
+      \includegraphics[width=100px]{img/mahout_logo.png}
+    \end{center}
+
+    \framebreak
+
+    \begin{itemize}
+      \item Zookeeper
+      \item Sinchronizacija, monitoringas, grupinis servisas
+    \end{itemize}
+    \begin{center}
+      \includegraphics[height=100px]{img/zookeeper.png}
+    \end{center}
+
+  \end{frame}
+
+  \begin{frame}{Kas naudoja?}
+    \begin{itemize}
+      \item Adobe;
+      \item Apple;
+      \item Linkedin;
+      \item Yahoo;
+      \item Twitter;
+      \item ...
+      \item Beveik kiekvienas startup'as;
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Ačiū}
+    \begin{itemize}
+      \item Klausimai?
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Literatūra}
+    \bibliographystyle{plain}
+    \bibliography{references}
   \end{frame}
 
 \end{document}

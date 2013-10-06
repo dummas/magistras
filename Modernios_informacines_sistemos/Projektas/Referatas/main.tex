@@ -1,0 +1,175 @@
+\documentclass[10pt]{IEEEtran}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[L7x]{fontenc}
+\usepackage[lithuanian]{babel}
+\usepackage{listings}
+
+\lstset{
+	basicstyle=\footnotesize,
+	language=Java,
+	morekeywords={String,each,in,Iterator}
+}
+
+\author{Maksim Norkin\\ \texttt{maksim.norkin@ieee.org}}
+\title{Hadoop}
+
+\begin{document}
+
+	\maketitle
+
+	\section{Įžanga}
+
+	\section{Istorija}
+
+		Hadoop projektas prasidėjo nuo Google. Jie norėjo atsisiųsti visą internetą ir atlikti tam tikrus skaičiavimus su gautais duomenimis. Tam reikėjo turėti labai brangią serverinę įranga ir jie neturėjo finansinių šaltinių tokiai įrangai įsigyti. Problemą jie išsprendė su MapReduce algoritmu, ir su dideliu skaičiumi pigių kompiuterių.
+
+		Mokslinį straipsnį, aprašantį MapReguce algoritmą, parašė Dean Jeffrey ir Ghemawat Sanjay 2004 metais \cite{Dean:2008:MSD:1327452.1327492}. Straipsnį perskaitę Doug Cutting ir Mike Cafarella 2005 metais išleido prototipą, kurį pavadino Hadoop.
+
+	\section{Hadoop}
+
+		Hadoop yra sistema, kuri leidžia lengviau apdoroti didelius, labai didelius duomenų kiekius.
+
+		Hadoop susideda iš dviejų sudedamųjų dalių:
+
+		\begin{itemize}
+			\item MapReduce
+			\item HDFS
+		\end{itemize}
+
+		MapReduce yra mazgas, kuris yra atsakingas už skaičiavimus, HDFS (Hadoop Distributed File System) yra atsakingas už talpinimą.
+
+	\subsection{HDFS}
+
+		Iš naudotojo pusės, HDFS atrodo kaip paprasčiausią bylų sistema. Su ja galima atlikti visas standartinės bylų sistemos operacijos -- naujos bylos sukūrimas, šalinimas, papildymas, perkėlimas.
+
+		Iš architektūrinės pusės viskas atrodo šiek tiek kitaip. Įsivaizduokime, kad turime mažą bylą, kuri užima $600~MB$ disko vietos. HDFS tą bylą suskaldo į blokus po $2^n~MB$. Šiuo metu standartas yra $128~MB$, tačiau tai yra konfigūruojama ir galima pasiekti blokų ilgį nuo $32~MB$ iki kiek tik leidžia disko vieta. Po tokios operacijos turim 4 blokus po $128~MB$ ir vieną $88~MB$ bloką.
+
+		Toliau HDFS padaro kiekvieno bloko kopijas. Standartas yra 3 bloko kopijos, tačiau ir šis kintamasis yra konfigūruojamas.
+
+		Po kopijavimo, kiekvienas blokas yra paskirstomas po \textit{datanode} mazgus. Vienintelė sąlygą, kurią yra vadovaujamasi paskirstymo metu yra tos pačios kopijos nebūvimas viename mazge.
+
+		Dabar turimi duomenys yra paskirstyti po mazgus, tačiau nėra žinoma kokiame mazge kokie duomenys yra saugomi. Šitam darbui atlikti yra sukuriamas atskiras mazgas -- \textit{namenode}, kuris visuomet stebi ir surašo į lentelę kokie duomenys kuriame \textit{datanode} yra saugomi.
+
+		Tokia architektūra yra labai paranki, jeigu kažkuris iš \textit{datanode} mazgų sugenda ir duomenys tampa nebepasiekiami. Ten buvę duomenys yra identifikuojami \textit{namenode} ir padaromos kopijos į kitus \textit{datanode} mazgus.
+
+	\subsection{MapReduce}
+
+		MapReduce yra programavimo modelis, kuris leidžia lengviau atlikti paskirstytus skaičiavimus tarp atskirų mazgų.
+
+		Visi atliekami skaičiavimai yra atliekami su \textit{<raktas, reikšmė>} tipo duomenų struktūra. Pavyzdžiui:
+
+		\begin{itemize}
+			\item $<key,~value>$
+			\item $<timestamp,~action>$
+			\item $<timestamp,~log~entry>$
+			\item $<frame,~bytes>$
+		\end{itemize}
+
+		Modelis yra labai paprastas ir lengvas naudoti. Sprendžiant užduoti, programuotojas galvoja tik map ir reduce operacijų tipais. Nebelieka poreikio galvoti apie fizinius duomenų skirstymus tarp mazgų.
+
+		Nėra jokios priklausomybės nuo schemos ir duomenų tipo, kas suteikia lankstumo sistemai. Išskirtiniai ar nestruktūrizuoti duomenys yra labai lengvai apdorojami su MapReduce, lyginant su DBMS.
+
+		Visiškai nesvarbu kokie yra duomenų talpinimo sprendimai. MapReduce gali dirbti ir su BigTable.
+
+		Taip pat vieni iš didžiausių MapReduce privalumų yra klaidos tolerancija ir didelis masto lankstumas. Yahoo deklaruoja, kad 2008 jų serveriuose buvo 4000 \textit{datanode} mazgų \cite{shvachko2008scaling}.
+
+	\subsection{MapReduce pavyzdys}
+
+		Daugelis programavimo kalbų mokymas yra pradedamas nuo ``Hello world'' tipo pavyzdžio. Tokio tipo įvadinis pavyzdys MapReduce modelio atveju yra to paties žodžio kartotinių skaičiavimas. Įsivaizduojama sistema bus sudaryta iš dviejų \textit{datanode}. Pavyzdys yra pateikiamas \ref{lst:mapreduce} pav.
+
+		\begin{figure}
+			\lstinputlisting{codes/word_count.java}
+			\caption{MapReduce algoritmas, skaičiuoti to paties žodžio pakartojimo skaičių}
+			\label{lst:mapreduce}
+		\end{figure}
+
+		Į įėjimą paduosime sakinius, kur \textit{key} bus eilutės numeris, o \textit{value} bus pats sakinys. Sakinys yra suskaldomas po vieną žodį ciklo metu ir suformuojamas nauji duomenys, kur \textit{key} yra pats žodis, o \textit{value} priskiriamas 1. Taip iš pirmo \textit{datanode} ateis 
+
+		\begin{itemize}
+			\item $<Hello,~1>$
+			\item $<World,~1>$
+			\item $<Bye,~1>$
+			\item $<World,~1>$
+		\end{itemize}
+
+		Iš antro \textit{datanode} ateis
+
+		\begin{itemize}
+			\item $<Hello,~1>$
+			\item $<Hadoop,~1>$
+			\item $<Goodbye,~1>$
+			\item $<Hadoop,~1>$
+		\end{itemize}
+
+		Antra funkcija \textit{reduce} atlieka kartotinių sumavimą. Galutinis rezultatas iš pirmo \textit{datanode}
+
+		\begin{itemize}
+			\item $<Hello,~1>$
+			\item $<World,~2>$
+			\item $<Bye,~1>$
+		\end{itemize}
+
+		Iš antro 
+
+		\begin{itemize}
+			\item $<Hello,~1>$
+			\item $<Hadoop,~2>$
+			\item $<Goodbye,~1>$
+		\end{itemize}
+
+		Sujungus abiejų \textit{datanode} mazgų rezultatus, gaunamas sekantis rezultatas:
+
+		\begin{itemize}
+			\item $<Hello,~2>$
+			\item $<World,~2>$
+			\item $<Bye,~1>$
+			\item $<Hadoop,~2>$
+			\item $<Goodbye,~1>$
+		\end{itemize}
+
+	\subsection{Išvados}
+
+		MapReduce yra labai geras modelis, tačiau kaip ir kiekviena sistema, jis turi savo minusų. Iš programavimo pusės MapReduce gali atrodyti kaip asemblerio programavimo kalba. Kiekvienam darbui su duomenimis, reikia rašyti MapReduce modelio algoritmą. Toks algoritmas gali labai išsiplėsti, jeigu norima atlikti skaičiavimus, pritaikius grafų teoriją.
+
+		Nėra jokios aukšto lygio programavimo kalbos, kuri tiesiai išsiverstų į MapReduce tipo modelį, kaip pavyzdžiui SQL DBMS atveju \cite{lee2012parallel}. Nėra jokio optimizacijos mechanizmo efektyviai išnaudoti užklausas. Dirbantis programuotojas turi nuolat galvoti tik \textit{map} ir \textit{reduce} principais, kas yra labai varžantis aspektas.
+
+		Nėra jokios schemos ir jokių indeksų. MapReduce procesas yra iškarto pradedamas, kai tik duomenys yra užkraunami į atmintį. Jokio duomenų modeliavimo principo čia pritaikyti nėra vietos. MapReduce reikalauja kaskart išnagrinėti įėjimą, išskaityti ir sukurti duomenų objektus. Toks procesas sukelia įvykdymo efektyvumo degeneraciją \cite{pavlo2009comparison}. 
+
+		Labai žemas efektyvumas. MapReduce buvo kurtas, sprendžiant dvi pagrindines kylančias problemas su didelio mąsto skaičiavimais:
+
+		\begin{itemize}
+			\item Klaidų tolerancijai
+			\item Mąsto keitimo lankstumas
+		\end{itemize}
+
+		Esant tokiems tikslams, MapReduce nėra labai efektyvus I/O atveju. Map ir Reduce operacijos yra blokuojančio tipo. Reduce negali pradėti savo darbo tol, kol nėra baigta map operacija. Taip pat neegzistuoja jokios darbo planavimo strategijos.
+
+		Turint tiek daug neišspręstų problemų iš MapReduce pusės, atsirado projektai, kurių tikslas yra jas išspręsti. 
+
+	\section{MapReduce aukštesnio lygio kalbos}
+
+		Atsiradus poreikiui rašyti sudėtingesnius algoritmus didelėms problemoms spręsti, iškilo būtinybė pateikti sprendimus aukštesnės kalbos pagrindu. Dabartiniu metu, aktyviai vystomi du projektai, sprendžiantys šią užduotį:
+
+		\begin{itemize}
+			\item Hive
+			\item Pig
+		\end{itemize}
+
+		Nepriklausomai nuo pasirinktos aukštesnio lygio programavimo kalbos, problemos sprendimas yra kompiliuojamas iki žemiausio, MapReduce tipo modelio.
+
+		\subsection{Hive}
+
+			% TODO
+
+		\subsection{Pig}
+
+
+	\section{Išvados}
+
+	\section{Literatūra}
+
+		\bibliographystyle{plain}
+		\bibliography{references}
+
+\end{document}

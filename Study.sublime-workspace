@@ -151,6 +151,41 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Modernios_informacines_sistemos/Projektas/Prezentacija/main.tex",
+			"settings":
+			{
+				"buffer_size": 1800,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\\documentclass{IEEEtran}\n\n\\author{Maksim Norkin\\\\ \\texttt{maksim.norkin@ieee.org}}\n\\title{Hadoop}\n\n\\begin{document}\n\n	\\maketitle\n\n	\\section{Introduction}\n\n\\end{document}",
+			"file": "Modernios_informacines_sistemos/Projektas/Referatas/main.tex",
+			"file_size": 169,
+			"file_write_time": 130255447510551389,
+			"settings":
+			{
+				"buffer_size": 169,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/maksim/Downloads/bare_adv.tex",
+			"settings":
+			{
+				"buffer_size": 39608,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Modernios_informacines_sistemos/Projektas/Prezentacija/references.bib",
+			"settings":
+			{
+				"buffer_size": 492,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -163,9 +198,10 @@
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 160.0,
 		"history":
 		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
 		]
 	},
 	"distraction_free":
@@ -179,6 +215,11 @@
 	},
 	"file_history":
 	[
+		"/home/maksim/Study/Modernios_informacines_sistemos/Literatura",
+		"/home/maksim/Study/Modernios_informacines_sistemos/Laboratoriniai",
+		"/home/maksim/Study/Modernios_informacines_sistemos/Projektas",
+		"/home/maksim/Study/Baigiamasis_darbas/r1/main.tex",
+		"/home/maksim/Study/README.md",
 		"/home/maksim/Work/pineapple/pineapple/payments/models.py",
 		"/home/maksim/Work/pineapple/pineapple/applications/models.py",
 		"/home/maksim/Work/pineapple/pineapple/messages/models.py",
@@ -293,8 +334,125 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Modernios_informacines_sistemos/Projektas/Prezentacija/main.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1800,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1649,
+								1649
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX Beamer.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 720.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Modernios_informacines_sistemos/Projektas/Referatas/main.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 169,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								152,
+								152
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/maksim/Downloads/bare_adv.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 39608,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 13560.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Modernios_informacines_sistemos/Projektas/Prezentacija/references.bib",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 492,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9,
+								9
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/Bibtex.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -686,7 +844,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 244.0,
+	"side_bar_width": 322.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

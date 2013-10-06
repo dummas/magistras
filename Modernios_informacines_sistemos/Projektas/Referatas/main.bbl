@@ -1,0 +1,26 @@
+\begin{thebibliography}{1}
+
+\bibitem{Dean:2008:MSD:1327452.1327492}
+Jeffrey Dean and Sanjay Ghemawat.
+\newblock Mapreduce: simplified data processing on large clusters.
+\newblock {\em Commun. ACM}, 51(1):107--113, January 2008.
+
+\bibitem{lee2012parallel}
+Kyong-Ha Lee, Yoon-Joon Lee, Hyunsik Choi, Yon~Dohn Chung, and Bongki Moon.
+\newblock Parallel data processing with mapreduce: a survey.
+\newblock {\em ACM SIGMOD Record}, 40(4):11--20, 2012.
+
+\bibitem{pavlo2009comparison}
+Andrew Pavlo, Erik Paulson, Alexander Rasin, Daniel~J Abadi, David~J DeWitt,
+  Samuel Madden, and Michael Stonebraker.
+\newblock A comparison of approaches to large-scale data analysis.
+\newblock In {\em Proceedings of the 2009 ACM SIGMOD International Conference
+  on Management of data}, pages 165--178. ACM, 2009.
+
+\bibitem{shvachko2008scaling}
+KV~Shvachko and AC~Murthy.
+\newblock Scaling hadoop to 4000 nodes at yahoo!
+\newblock {\em world wide web, http://developer. yahoo.
+  net/blogs/hadoop/2008/09/scaling\_hadoop\_to\_4000\_nodes\_a. html}, 2008.
+
+\end{thebibliography}
