@@ -1,0 +1,49 @@
+\documentclass{beamer}
+\usepackage[lithuanian]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[L7x]{fontenc}
+\usepackage{lmodern}
+\usepackage{caption}
+\usepackage{subfig}
+\usepackage{graphicx}
+
+\newcommand*\oldmacro{}
+\let\oldmacro\insertshortinstitute % save previous definition
+\renewcommand*\insertshortinstitute{
+  \leftskip=.3cm % before the author could be a plus1fill ...
+  %\insertframenumber\,/\,\inserttotalframenumber\hfill\oldmacro}
+  \oldmacro\hfill\insertframenumber\,/\,\inserttotalframenumber}
+
+\let\oldshorttitle\insertshorttitle
+\renewcommand*\insertshorttitle{
+    \leftskip=0.4cm
+\oldshorttitle\hfill Vilnius
+}
+
+\usetheme{Dresden}
+\usecolortheme{vgtuef}
+
+\logo{\includegraphics[height=20px]{img/isk_logo.jpg}}
+
+\title[Hadoop]{Hadoop\\Didelių duomeų apdorojimas studentišku biudžetu}
+\author[M. Norkin]{Maksim Norkin, ISIfm-13}
+\institute[VGTU Fundamentinių mokslų faklutetas]{
+  Vilniaus Gedimino technikos universitetas\\
+  Fundamentinių mokslų fakultetas\\
+  Informacinių Sistemų katedra\\
+  \texttt{maksim.norkin@ieee.org}
+}
+
+\begin{document}
+
+  \begin{frame}
+    \titlepage
+  \end{frame}
+
+  \begin{frame}{Įžanga}
+    \begin{itemize}
+      \item Foo
+    \end{itemize}
+  \end{frame}
+
+\end{document}
