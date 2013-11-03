@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.11.2)  3 NOV 2013 15:18
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.11.2)  4 NOV 2013 00:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -346,28 +346,24 @@ LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line
 LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
 46.
 Package epstopdf Info: Source file: <figures/struktura.eps>
-(epstopdf)                    date: 2013-11-02 16:31:32
-(epstopdf)                    size: 355051 bytes
+(epstopdf)                    date: 2013-11-03 18:09:07
+(epstopdf)                    size: 349995 bytes
 (epstopdf)             Output file: <figures/struktura-eps-converted-to.pdf>
-(epstopdf)                    date: 2013-11-02 17:12:38
-(epstopdf)                    size: 120672 bytes
+(epstopdf)                    date: 2013-11-03 18:10:01
+(epstopdf)                    size: 117480 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/struktura-eps-conve
 rted-to.pdf figures/struktura.eps>
 (epstopdf)             \includegraphics on input line 48.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/struktura-eps-converted-to.pdf, id=1, 1489.565pt x 1048.91875pt>
+<figures/struktura-eps-converted-to.pdf, id=1, 1491.5725pt x 1048.91875pt>
 File: figures/struktura-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/struktura-eps-converted-to.pdf>
-Overfull \hbox (26.02698pt too wide) in paragraph at lines 48--50
- [][] 
- []
-
 LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
-50.
+49.
 LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
-50.
+49.
 LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
 53.
 LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
@@ -454,41 +450,275 @@ LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line
 132.
 LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
 134.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 141.
 LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
-136.
+141.
 LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
-138.
+142.
 LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
-140.
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+143.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+149.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+150.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+151.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+152.
 
+Underfull \hbox (badness 1762) in paragraph at lines 152--153
+[]\L7x/lmr/m/n/10 Uþdavinius, ku-riø ágy-ven-di-ni-mas pa-de-da ið-spræs-ti
+ []
+
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+157.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+161.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+166.
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
 LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
-140.
+177.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+180.
  [2 <./figures/struktura-eps-converted-to.pdf>]
 LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
-140.
- [3] (./main.aux) ) 
+181.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+183.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+188.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+189.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+194.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+198.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+207.
+Package epstopdf Info: Source file: <figures/hierarchija.eps>
+(epstopdf)                    date: 2013-11-03 18:07:49
+(epstopdf)                    size: 186248 bytes
+(epstopdf)             Output file: <figures/hierarchija-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-11-03 18:10:01
+(epstopdf)                    size: 78615 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/hierarchija-eps-con
+verted-to.pdf figures/hierarchija.eps>
+(epstopdf)             \includegraphics on input line 208.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/hierarchija-eps-converted-to.pdf, id=19, 679.53876pt x 1167.36125pt>
+File: figures/hierarchija-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/hierarchija-eps-converted-to.pdf>
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+209.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+209.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+213.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+216.
+ [3]
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+217.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+219.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+223.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+227.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+231.
+Package epstopdf Info: Source file: <figures/kliento_verslo_procesas.eps>
+(epstopdf)                    date: 2013-11-03 18:41:30
+(epstopdf)                    size: 120521 bytes
+(epstopdf)             Output file: <figures/kliento_verslo_procesas-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2013-11-03 20:32:39
+(epstopdf)                    size: 53953 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/kliento_verslo_proc
+esas-eps-converted-to.pdf figures/kliento_verslo_procesas.eps>
+(epstopdf)             \includegraphics on input line 233.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/kliento_verslo_procesas-eps-converted-to.pdf, id=25, 515.9275pt x 1228
+.59pt>
+File: figures/kliento_verslo_procesas-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/kliento_verslo_procesas-eps-converted-to.pdf>
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+234.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+234.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+238.
+Package epstopdf Info: Source file: <figures/sistemos_atnaujinimas.eps>
+(epstopdf)                    date: 2013-11-03 20:36:41
+(epstopdf)                    size: 108211 bytes
+(epstopdf)             Output file: <figures/sistemos_atnaujinimas-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2013-11-03 20:36:43
+(epstopdf)                    size: 49759 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/sistemos_atnaujinim
+as-eps-converted-to.pdf figures/sistemos_atnaujinimas.eps>
+(epstopdf)             \includegraphics on input line 240.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/sistemos_atnaujinimas-eps-converted-to.pdf, id=26, 515.9275pt x 1255.6
+9125pt>
+File: figures/sistemos_atnaujinimas-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use figures/sistemos_atnaujinimas-eps-converted-to.pdf>
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+241.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+241.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+245.
+Package epstopdf Info: Source file: <figures/nuolatines_versijos_modelis.eps>
+(epstopdf)                    date: 2013-11-03 20:32:30
+(epstopdf)                    size: 74731 bytes
+(epstopdf)             Output file: <figures/nuolatines_versijos_modelis-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2013-11-03 20:32:40
+(epstopdf)                    size: 33789 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/nuolatines_versijos
+_modelis-eps-converted-to.pdf figures/nuolatines_versijos_modelis.eps>
+(epstopdf)             \includegraphics on input line 247.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/nuolatines_versijos_modelis-eps-converted-to.pdf, id=27, 515.9275pt x 
+1141.26375pt>
+File: figures/nuolatines_versijos_modelis-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use figures/nuolatines_versijos_modelis-eps-converted-to.pdf>
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+248.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+248.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+252.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+256.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+258.
+
+Underfull \vbox (badness 2922) has occurred while \output is active []
+
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+261.
+ [4 <./figures/hierarchija-eps-converted-to.pdf> <./figures/kliento_verslo_proc
+esas-eps-converted-to.pdf>]
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+263.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+264.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+265.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+266.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+267.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+268.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+271.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+275.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+280.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+282.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+284.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+286.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+288.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+290.
+ [5 <./figures/sistemos_atnaujinimas-eps-converted-to.pdf> <./figures/nuolatine
+s_versijos_modelis-eps-converted-to.pdf>]
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+290.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+291.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+293.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+295.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+296.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+297.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+299.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+301.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+302.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+304.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+306.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+311.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+313.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+315.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+317.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+319.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+321.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+322.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+323.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+325.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.327                 \end{itemize}
+                                   
+? X
+ 
 Here is how much of TeX's memory you used:
- 4936 strings out of 493848
- 70037 string characters out of 1152823
- 161891 words of memory out of 3000000
- 8143 multiletter control sequences out of 15000+50000
+ 4957 strings out of 493848
+ 71237 string characters out of 1152823
+ 167891 words of memory out of 3000000
+ 8161 multiletter control sequences out of 15000+50000
  109889 words of font info for 102 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 41i,11n,40p,511b,630s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-l7x.enc}</usr/share/
-texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb>
-Output written on main.pdf (3 pages, 330108 bytes).
+ 41i,11n,40p,867b,630s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-l7x.enc}</usr/share/texmf-texlive/fonts
+/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-texlive/fonts/type1/publi
+c/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/pub
+lic/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pf
+b>
+Output written on main.pdf (5 pages, 559688 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
+ 78 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

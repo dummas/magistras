@@ -39,15 +39,15 @@
 
             Iškeliama problema yra randama kiekvienos dienos situacijoje, kuomet tik važiuojame į bet kokio pobūdžio susitikimą ir reikia automobilį palikti stovėjimo aikštelėje.
 
-            Struktūrinė automobilių stovėjimo paslaugų teikimo įmonė schema pavaizduota \ref{fig:struktur2a} pav. Jos sudarančių struktūrinių vienetų funkcijos ir ryšiai yra pateikti \ref{table:struktura} lentelėje. 
+            Struktūrinė automobilių stovėjimo paslaugų teikimo įmonė schema pavaizduota \ref{fig:struktura} pav. Jos sudarančių struktūrinių vienetų funkcijos ir ryšiai yra pateikti \ref{table:struktura} lentelėje. 
 
             Vienas iš problematiškiausių mazgų, yra ryšys tarp kliento ir terminalo. Jam užtikrinti reikalingas patikimas ryšys tarp banko, telekomunikacijų bendrovės, techninės priežiūros specialisto ir pavedimų posistemės vientiso veikimo. Esamą posistemę būtina suprastinti, kadangi neveikiant vienam iš posistemės mazgų -- griūna visos posistemės darbas.
 
             \begin{figure*}[t]
                 \centering
-                \includegraphics[width=540px]{figures/struktura.eps}
-                \label{fig:struktur2a}
+                \includegraphics[width=500px]{figures/struktura.eps}
                 \caption{Dalykinės srities struktūra.}
+                \label{fig:struktura}
             \end{figure*}
 
             \begin{table*}[t]
@@ -156,9 +156,27 @@
 
         \subsection{Įvadas}
 
+            Verslo sistemos strateginis tikslas yra kuo žemesnės laikinės sąnaudos, užtikrinant tokį patį ir didesnį kokybės lygį. Vienas iš strateginių tikslų yra ir inovacijų diegimas. Versle naujovės ir inovacijos yra didžiausias plėtros ir pajamų šaltinis.
+
         \subsection{Analizė}
 
+            Kliento pusė automobilio stovėjimo paslaugomis nori naudotis greitai, patogiai ir efektyviai. Klientas turi jausti ne grėsmę, kad jo automobilis buvo paliktas gatvėje neprižiūrėtas, tačiau saugumo jausmą ir užtikrintumą, kad jo atlikta operacija ne tik leidžia jam statyti automobilį tam skirtoje vietoje, tačiau ir užtrina tolimesnį paslaugų gerinimą.
+
+            Viena iš inovacijų gali būti pilnai automatizuota automobilių stovėjimo apmokėjimo sistema, kuriai visiškai nereikia terminalų. Jis, kaip toks fizinis objektas, yra perkeliamas į telekomunikacijų bendrovę fundamentaliai. Klientas, turintis glaustus santykius su savo ryšio operatoriumi, telefono pagalba užregistruoja savo automobilio numerį kaip stovėjimo aikštelės naudotoją ir mobilios programos pagalba užfiksuoja nuo kada prasidėjo automobilio stovėjimas. Jokio laiko limito nėra taikoma -- klientas stovi tiek, kiek reikia, apvalinant stovėjimą iki minučių tikslumo. Klientui užfiksavus, kad jos naudojamas automobilis paliko stovėjimo vietą, jis informuoja operatorių. Operatorius pilnai žino kurioje vietoje ir kuriam laiko tarpui klientas buvo palikęs savo naudojamą automobilį.
+
+            Remiantis tokia galinio kliento schema, automobilių stovėjimo įmonė turi tik pateikti telekomunikacijų bendrovei stovėjimo įkainius, priklausomai nuo stovėjimo zonų, kurios yra suderinamos su savivaldybe. Terminalų nebūvimas priveda prie to, kad galima ne tik sumažinti techninės priežiūros inžinieriaus pareigų aibę, tačiau ir visiškai jį pašalinti iš nagrinėjamos įmonės schemos. Iš darbo perskirstymo, techninės priežiūros inžinierių galima kvalifikuoti į testuotoją, kuris užtikrintų sistemų inžinieriaus pateikiamų sprendimų kokybės lygį. 
+
+            Kita inovacija, tai šiuolaikinės automatizuotos atnaujinimo sistemos, kurios nebereikalauja atskiro žmogaus, kuris užsiima būtent šituo darbu. Tas pas liečia ir serverio priežiūros darbus. Taip iš įmonės sistemos iškrenta kaip toks administratorius. Tai padidina sistemų inžinieriaus pareigų spektrą, tačiau tokia sistema labai gelbsti, kuomet reikia spręsti kritines problemas arba reikia atnaujinti eilę serverinių mazgų. Tik sistemų inžinierius pilnai žino kaip būtent turi veikti sistema, kokius reikalavimus jinai būtent turi atitikti ir kaip efektyviausiai būtų išnaudoti esamus resursus geriausiam rezultatui pasiekti.
+
+            Paskutinis procesas, kurį galima įtraukti į tikslus yra nuolatinės sistemos versijos pateikimas. Pagal sistemos įgyvendinimo tradicijas, naują sistemos versija yra pateikiama vieną arba du kartus per mėnesį. Toks modelis turi vieną esminį trūkumą -- klientui tenka laukti mažiausiai dvi savaites, kol bus išleista jo norima opcija. 
+
+            Darbo užduotys yra išskaidomos į dalis, vadinamomis iteracijomis, kurios turi turėti baigtinį funkcionalumą. Pati pirma versija gali turėti labai limituotą tiek funkcionalumą, tiek opcijų skaičių, tačiau ji veiks. Jeigu kliento pageidaujama sistema yra pakankamai didelė, klientui nebereikia laukti iki tol, kol bus įgyvendintas visas funkcionalumas ir opcijos. Klientas gali naudotis ribota sistema jau po pirmos iteracijos. Taip yra pagerinamas ryšys su klientu ir padidinama produkto kokybė, kadangi kuriamas produktas ne vienam kartui, o nuolatiniam jo vystymui.
+
+            Kiekybinių tikslų iškelti modeliuojamoje situacijoje nėra.
+
         \subsection{Išvados}
+
+            Laboratorinio darbo metu buvo sumodeliuoti verslo sistemos tikslai, nurodyti pakeitimo hierarchiniai ryšiai, bei ryšių pakeitimas, norint optimizuoti ir pagerinti kokybinius išteklius. Iš hierarchinės struktūros visiškai pašalintas administratoriaus vaidmens objektas, techninės priežiūros inžinierius 
 
     \section{Laboratorinis darbas nr. 3}
 
@@ -175,9 +193,26 @@
 
         \subsection{Įvadas}
 
+            Verslo sistemos organizacinė struktūra modeliuojama pagal hierarchinius ryšius, kadangi esama įmonė yra maža ir jos paslaugų spektras yra labai siauras.
+
         \subsection{Analizė}
 
+            Analizuojamos verslo sistemos organizacinė struktūra yra pateikiama \ref{fig:hierarchija} pav. 
+
+            Aukščiausią vietą užima, direktorius, kuris koordinuoja visus darbus, susijusius ryšiais su savivaldybe -- verslo plėtra. Taip pat jo pareigose yra darbo našumo netiesioginis taikymas ir atsakomumas savivaldybei už teikiamų paslaugų kokybę.
+
+            Žemiau esantis architektas yra sekanti atsakomybės grandis, atsakinga už visus techninius sprendimus. Darbo terminų, jų paskirstymas vidiniais ištekliais tarp sistemų inžinierių, bei administratorių. Techninės priežiūros inžinieriai jam atgaliniu ryšiu suteikia informacijos kaip vienas ar kitas sprendimas veikia realiomis sąlygomis, bei kiek kaštų reikalauja priežiūra. Taip ir renkamos technologijos, kurios toliau patenka į specifikacijas sistemų inžinieriams.
+
+            \begin{figure}
+                \centering
+                \includegraphics[width=200px]{figures/hierarchija.eps}
+                \caption{Nagrinėjamos verslo sistemos organizacinė struktūra.}
+                \label{fig:hierarchija}
+            \end{figure}
+
         \subsection{Išvados}
+
+            Laboratorinio darbo metu sumodeliuota verslo sistemos organizacinė struktūra pagal hierarchinius ryšius, pateiktos ribos, kuriose vykdoma analizė. Išvardintos kiekvienos grandines pagrindinės funkcijos ir sąryšiai.
 
     \section{Laboratorinis darbas nr. 4}
 
@@ -187,9 +222,36 @@
 
         \subsection{Įvadas}
 
+            Pateikiami tris procesai. Vienas iš procesų yra kliento užklausos siuntimas, atsiskaitymui už paslaugos. Kitas procesas yra sistemos atnaujinimas. Paskutinis pateikiamas procesas yra nuolatinės sistemos versijos atnaujinimas.
+
         \subsection{Analizė}
 
+            Kliento verslo procesas yra pateikiamas \ref{fig:kliento_verslo_procesas} pav. Sistemos atnaujinimo procesas yra pateikiamas \ref{fig:sistemos_atnaujinimas} pav. Sistemos nuolatinės versijos procesas yra pateikiamas \ref{fig:nuolatines_versijos_modelis} pav.
+
+            \begin{figure}[t]
+                \centering
+                \includegraphics[width=200px]{figures/kliento_verslo_procesas.eps}
+                \caption{Kliento verslo sistemos proceso modeliavimas.}
+                \label{fig:kliento_verslo_procesas}
+            \end{figure}
+
+            \begin{figure}[t]
+                \centering
+                \includegraphics[width=200px]{figures/sistemos_atnaujinimas.eps}
+                \caption{Sistemos atnaujinimas.}
+                \label{fig:sistemos_atnaujinimas}
+            \end{figure}
+
+            \begin{figure}[t]
+                \centering
+                \includegraphics[width=200px]{figures/nuolatines_versijos_modelis.eps}
+                \caption{Nuolatinės versijos modelis.}
+                \label{fig:nuolatines_versijos_modelis}
+            \end{figure}
+
         \subsection{Išvados}
+
+            Laboratorinio darbo metu pateikti 3 verslo procesai, kuriuose dalyvauja analizuojamos verslo sistemos objektai. Visuose procesuose pateikiama sekos diagrama, kurioje detaliai parodyta, kaip vykdomas procesas ir kas jį vykdo.
 
     \section{Laboratorinis darbas nr. 5}
 
@@ -208,8 +270,113 @@
 
         \subsection{Įvadas}
 
+            Kiekvienas iš objektų verslo įmonėje turi atlikti jam skirtas užduotis. Užduotis vienaip galima traktuoti kaip tiesioginės ir netiesioginės pareigos. Analizės metu nagrinėjama kiekvieno modelio objekto pagrindinė užduotis, ko būtent reikia, kad užduotis būtų sėkminga. Apžvelgti atvejai, kurie neleidžia tiesiogiai atlikti objekto užduoties.
+
         \subsection{Analizė}
 
+            Analizei darbo užduočių schema bus panaudota iš prieš tai buvusio laboratorinio darbo. Darbo užduočių schema pateikiama \ref{fig:hierarchija} pav. Iš kiekvieno objekto parinkta viena užduotis ir detaliai išanalizuota. 
+
+            \begin{itemize}
+                \item Užduoties pavadinimas
+                \begin{itemize}
+                    \item Terminalų plėtra
+                \end{itemize}
+                \item Tikslas
+                \begin{itemize}
+                    \item Verslo plėtra
+                \end{itemize}
+                \item Sėkmės veiksniai
+                \begin{itemize}
+                    \item Sėkmingas bendradarbiavimas su Savivaldybe
+                    \item Inovacijos, leidžiančios pigiau suteikti tą pačią paslaugą
+                \end{itemize}
+                \item Sėkmės vertinimo kriterijai
+                \begin{itemize}
+                    \item Apyvartos didėjimas
+                    \item Darbo vietų didėjimas
+                    \item Įmonės apimamo automobilių vietų skaičiaus didėjimas
+                \end{itemize}
+                \item Ypatingos situacijos
+                \begin{itemize}
+                    \item Bendradarbiavimo su savivaldybe nutraukimas
+                    \item Didelio konkurento į vietinę rinką atėjimas
+                \end{itemize}
+                \item Variantai
+                \begin{itemize}
+                    \item Teigiamas arba neigiamas
+                \end{itemize}
+            \end{itemize}
+
+            \begin{itemize}
+                \item Užduotis pavadinimas
+                \begin{itemize}
+                    \item Projektų terminų derinimas
+                \end{itemize}
+                \item Tikslą
+                \begin{itemize}
+                    \item Optimaliai paskirstyti laiką
+                \end{itemize}
+                \item Sėkmės veiksnius
+                \begin{itemize}
+                    \item Profesionali komanda
+                    \item Komanda pilnai supranta kiekvieno stiprumus ir trūkumus, taip sėkmingai skirdama užduotis tarp tų, kurie geriau jas supranta.
+                    \item Racionalus 
+                \end{itemize}
+                \item Sėkmės vertinimo kriterijus
+                \begin{itemize}
+                \end{itemize}
+                \item Ypatingas situacijas
+                \begin{itemize}
+                \end{itemize}
+                \item Variantus
+                \begin{itemize}
+                \end{itemize}
+            \end{itemize}
+
+            \begin{itemize}
+                \item Užduotis pavadinimas
+                \begin{itemize}
+                \end{itemize}
+                \item Tikslą
+                \begin{itemize}
+                \end{itemize}
+                \item Sėkmės veiksnius
+                \begin{itemize}
+                \end{itemize}
+                \item Sėkmės vertinimo kriterijus
+                \begin{itemize}
+                \end{itemize}
+                \item Ypatingas situacijas
+                \begin{itemize}
+                \end{itemize}
+                \item Variantus
+                \begin{itemize}
+                \end{itemize}
+            \end{itemize}
+
+            \begin{itemize}
+                \item Užduotis pavadinimas
+                \begin{itemize}
+                \end{itemize}
+                \item Tikslą
+                \begin{itemize}
+                \end{itemize}
+                \item Sėkmės veiksnius
+                \begin{itemize}
+                \end{itemize}
+                \item Sėkmės vertinimo kriterijus
+                \begin{itemize}
+                \end{itemize}
+                \item Ypatingas situacijas
+                \begin{itemize}
+                \end{itemize}
+                \item Variantus
+                \begin{itemize}
+                \end{itemize}
+            \end{itemize}
+
         \subsection{Išvados}
+
+
 
 \end{document}
