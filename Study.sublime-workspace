@@ -152,10 +152,10 @@
 	"buffers":
 	[
 		{
-			"file": "Baigiamasis_darbas/r1/main.tex",
+			"file": "Modernios_informacines_sistemos/Pratybos/1_dalis/main.tex",
 			"settings":
 			{
-				"buffer_size": 69,
+				"buffer_size": 2330,
 				"line_ending": "Unix"
 			}
 		}
@@ -316,30 +316,31 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Baigiamasis_darbas/r1/main.tex",
-					"semi_transient": true,
+					"file": "Modernios_informacines_sistemos/Pratybos/1_dalis/main.tex",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 69,
+						"buffer_size": 2330,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								69,
-								69
+								378,
+								378
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
 					"type": "text"
 				}
 			]
