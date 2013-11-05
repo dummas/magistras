@@ -1,6 +1,5 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.11.2)  4 NOV 2013 00:18
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.11.2)  5 NOV 2013 21:10
 entering extended mode
- \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
@@ -234,11 +233,13 @@ Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 )
+
+Package epstopdf Warning: Shell escape feature is not enabled.
+
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 433.
-
 (/usr/share/texmf-texlive/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2009/10/26 v1.1 Configuration of epstopdf for TeX Live
 )))
@@ -670,8 +671,6 @@ LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line
 LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
 306.
 LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
-311.
-LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
 313.
 LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
 315.
@@ -682,43 +681,112 @@ LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line
 LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
 321.
 LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
-322.
-LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
 323.
 LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+324.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
 325.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.327                 \end{itemize}
-                                   
-? X
- 
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+327.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+329.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+331.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+333.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+334.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+336.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+338.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+345.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+347.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+349.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+351.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+353.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+355.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+356.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+357.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+359.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+361.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+362.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+364.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+366.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+367.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+369.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+371.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+378.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+380.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+382.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+384.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+386.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+388.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+390.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+392.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+393.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+395.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+397.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+398.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+399.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+401.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+403.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+407.
+LaTeX Font Info:    Failed loading font information for L7x+ptm. on input line 
+413.
+ [6] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 4957 strings out of 493848
- 71237 string characters out of 1152823
+ 4961 strings out of 493848
+ 71122 string characters out of 1152823
  167891 words of memory out of 3000000
- 8161 multiletter control sequences out of 15000+50000
+ 8164 multiletter control sequences out of 15000+50000
  109889 words of font info for 102 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  41i,11n,40p,867b,630s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-l7x.enc}</usr/share/texmf-texlive/fonts
-/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-texlive/fonts/type1/publi
-c/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/pub
-lic/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pf
-b>
-Output written on main.pdf (5 pages, 559688 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-l7x.enc}</usr/share/
+texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/te
+xmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/l
+mr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmri10.pfb>
+Output written on main.pdf (6 pages, 566021 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
+ 81 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

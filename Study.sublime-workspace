@@ -155,15 +155,7 @@
 			"file": "Modernios_informacines_sistemos/Pratybos/1_dalis/main.tex",
 			"settings":
 			{
-				"buffer_size": 9744,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Modernios_informacines_sistemos/Pratybos/2_dalis/main.tex",
-			"settings":
-			{
-				"buffer_size": 2167,
+				"buffer_size": 20959,
 				"line_ending": "Unix"
 			}
 		}
@@ -171,7 +163,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 54.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
@@ -200,6 +192,7 @@
 	},
 	"file_history":
 	[
+		"/home/maksim/Studies/Modernios_informacines_sistemos/Pratybos/2_dalis/main.tex",
 		"/home/maksim/Studies/Modernios_informacines_sistemos/Projektas/Prezentacija/references.bib",
 		"/home/maksim/Studies/Modernios_informacines_sistemos/Projektas/Prezentacija/main.tex",
 		"/home/maksim/Studies/Modernios_informacines_sistemos/Projektas/Referatas/main.tex",
@@ -324,7 +317,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -333,15 +326,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9744,
+						"buffer_size": 20959,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								385,
-								385
+								20248,
+								20248
 							]
 						],
 						"settings":
@@ -352,36 +345,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Modernios_informacines_sistemos/Pratybos/2_dalis/main.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2167,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								473,
-								473
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 6714.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
