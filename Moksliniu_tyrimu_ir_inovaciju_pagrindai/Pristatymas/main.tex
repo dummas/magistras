@@ -1,0 +1,129 @@
+\documentclass{beamer}
+\usepackage[lithuanian]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[L7x]{fontenc}
+\usepackage{lmodern}
+\usepackage{caption}
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\newcommand*\oldmacro{}
+\let\oldmacro\insertshortinstitute % save previous definition
+\renewcommand*\insertshortinstitute{
+  \leftskip=.3cm % before the author could be a plus1fill ...
+  %\insertframenumber\,/\,\inserttotalframenumber\hfill\oldmacro}
+  \oldmacro\hfill\insertframenumber\,/\,\inserttotalframenumber}
+
+\let\oldshorttitle\insertshorttitle
+\renewcommand*\insertshorttitle{
+    \leftskip=0.4cm
+\oldshorttitle\hfill Vilnius
+}
+
+\usetheme{Dresden}
+\usecolortheme{vgtuef}
+
+\logo{\includegraphics[height=20px]{img/isk_logo.jpg}}
+
+\title[MapReduce]{MapReduce: Simplified Data Processing on Large Clusters}
+\author[M. Norkin]{Maksim Norkin, ISIfm-13}
+\institute[VGTU Fundamentinių mokslų faklutetas]{
+  Vilniaus Gedimino technikos universitetas\\
+  Fundamentinių mokslų fakultetas\\
+  Informacinių Sistemų katedra\\
+  \texttt{maksim.norkin@ieee.org}
+}
+
+\begin{document}
+
+  \begin{frame}
+    \titlepage
+  \end{frame}
+
+  \begin{frame}{Problema}
+
+    \begin{itemize}
+      \item Bendras protokolas didelių duomenų apdorojimui tarp atskirų sistemos mazgų
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Darbo tikslas}
+    \begin{itemize}
+      \item Automatinis skaičiavimų lygiagretumas ir vykdymas tarp didelio kiekio skaičiavimo mazgų
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Uždaviniai}
+    \begin{itemize}
+      \item Aprašyti programavimo modelį
+      \item Aprašyti MapReduce įgyvendinimą 
+      \item Aptarti galimus patobulinimus
+      \item Pateikti įvykdymo greitaveikos matavimus
+      \item Parodyti įgyvendinimo pavyzdį Google sistemose
+      \item Aptarti panašius ir būsimus darbus
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}{Išvados}
+    \begin{itemize}
+      \item Sėkmingas modelio panaudojimas Google sistemose
+      \item Lengvas modelio panaudojimas
+      \item Platus problemų sąrašas yra lengvai aprašomas per MapRecude skaičiavimus
+      \item MapReduce algoritmo įgyvendinimas, kuris lengvai paskirstomas tarp tūkstančių skaičiavimo taškų
+      \item Griežtas programavimo modelis leidžia lengviau skirstyti skaičiavimus tarp mašinų
+      \item Tinklo pralaidumas yra esminė problema
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}[allowframebreaks=0.8]{Vertinimas}
+
+    \begin{itemize}
+      \item Turinys ir pavadinimas
+        \begin{itemize}
+          \item Straipsnio pavadinimas tiesiogiai atitinka straipsnio turinį
+        \end{itemize}
+      \item Aktualumas
+        \begin{itemize}
+          \item Analizuojama problema yra labai aktuali
+        \end{itemize}
+      \item Argumentavimas
+        \begin{itemize}
+          \item Autoriai pateikia grafinius skaičiavimų įrodymus, pateikiamas konkretus veiksmų planas, kiekvienas žingsnis yra detaliai aprašomas ir apžvelgiamas
+        \end{itemize}
+      \item Metodika
+        \begin{itemize}
+          \item Modeliavimas, sisteminė analizė
+        \end{itemize}
+      \item Nuoseklumas
+        \begin{itemize}
+          \item Pradedama nuo metodo aprašymo, tuomet keliamasi į bendrą algoritmo įgyveninimą, aptariami galimi nesėkmių atvejai. Pateikiami realių problemų sprendimų pavyzdžiai.
+        \end{itemize}
+      \item Problema, tikslas, uždaviniai, išvados
+        \begin{itemize}
+          \item Iškelti uždaviniai išspręsti
+        \end{itemize}
+      \item Bloomo taksonomija
+        \begin{itemize}
+          \item Pasiekiamas Veiksmų plano lygmens
+        \end{itemize}
+      \item Stilius
+        \begin{itemize}
+          \item Darbo stilius yra nuoseklus ir suprantamas kiekvieno, kas tik yra susidūręs su IT pobūdžio straipsniais
+        \end{itemize}
+      \item Literatūra
+        \begin{itemize}
+          \item Literatūros sąrašas stiprus
+        \end{itemize}
+    \end{itemize}
+
+  \end{frame}
+
+  \begin{frame}{Dėkojimai}
+
+    \begin{itemize}
+      \item Klausimai?
+    \end{itemize}
+  \end{frame}
+
+\end{document}

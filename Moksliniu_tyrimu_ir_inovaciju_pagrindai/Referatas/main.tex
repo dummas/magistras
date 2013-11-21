@@ -1,0 +1,97 @@
+\documentclass[10pt, onecolumn]{IEEEtran}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[L7x]{fontenc}
+\usepackage[lithuanian]{babel}
+\usepackage{listings}
+
+\lstset{
+	basicstyle=\footnotesize,
+	language=Java,
+	morekeywords={String,each,in,Iterator}
+}
+
+\author{Maksim Norkin, ISIfm-13\\ \texttt{maksim.norkin@ieee.org}}
+\title{MapReduce: Simplified Data Processing on Large Clusters}
+
+\begin{document}
+
+	\maketitle
+
+	\section{Problema}
+
+		Darbe analizuojama problema yra paskirstytų skaičiavimų įgyvendinimo įvairumas. Kiekvienas programuotojas gali įvairiai įgyvendinti savo pasirinktos problemos skaičiavimo mechanizmą. Prieš pradėdamas skaičiavimo operacijas, programuotojas turi pirmiausiai įvertinti kaip skaičiavimai bus paskirstyti tarp sistemų, kas nutinka, kuomet vienas skaičiavimas yra nutraukiamas, tačiau kiti skaičiavimai vykdomi toliau, kaip paskirstyti pačius duomenis tarp atskirų mazgų ir galiausiai kaip tai įvykdyti kuo greičiau. 
+
+		Straipsnyje yra pateikiamas programavimo modelis ir pati metodika, kuri leidžia programuotojui iškarto aprašyti skaičiavimo algoritmą ir visiškai negalvoti apie prieš tai išvardintas problemas. 
+
+	\section{Darbo tikslas}
+
+		Straipsnio tikslas yra pateikti sprendimą, kaip panaudojus bendrą programavimo modelį, galima labai lengvai skaičiavimo operacijas atlikinėti skirtinguose mazguose.
+
+	\section{Uždaviniai}
+
+		\begin{itemize}
+	      \item Aprašyti programavimo modelį (2. paragrafas)
+	      \item Aprašyti MapReduce įgyvendinimą (3. paragrafas)
+	      \item Aptarti galimus patobulinimus (4. paragrafas)
+	      \item Pateikti įvykdymo greitaveikos matavimus (5. paragrafas)
+	      \item Parodyti įgyvendinimo pavyzdį Google sistemose (6. paragrafas)
+	      \item Aptarti panašius ir būsimus darbus (7. paragrafas)
+	    \end{itemize}
+
+	\section{Vertinimas}
+
+		\begin{itemize}
+		\item Turinys ir pavadinimas
+	        \begin{itemize}
+	          \item Straipsnio pavadinimas tiesiogiai atitinka straipsnio turinį. Straipsnyje taip pat detaliai yra aprašomi taikymo pavyzdžiai.
+	        \end{itemize}
+	      \item Aktualumas
+	        \begin{itemize}
+	          \item Analizuojama problema yra labai aktuali. Kiekvieną dieną generuojamų duomenų kiekis didėja. Kompiuterio spartumas nespėja vyktis duomenų skaičiaus, todėl reikia ieškoti sprendimų kaip galima apdoroti didelius tera-baitinius duomenų kiekius. Šiuo metu tokios sistemos atviro kodo įgyvendinimą naudoja dauguma didelių kompanijų ir vos ne kiekvienas Sicilio slėnyje esantis start-up'as.
+	        \end{itemize}
+	      \item Argumentavimas
+	        \begin{itemize}
+	          \item Autoriai pateikia grafinius skaičiavimų įrodymus, pateikiamas konkretus veiksmų planas, kiekvienas žingsnis yra detaliai aprašomas ir apžvelgiamas. Grafiniai skaičiavimų įrodymai pateikia kiek laiko užtrunka duomenų persiuntimas iš vienos masino į kitą, lentelėje patiekiami skaitiniai duomenys tiek apie skaičiavimo greitaveiką, kiek vidutiniškai darbų buvo nutraukti dėl kažkokios kilmės gedimo ir kiek iš viso buvo įvykdytą užduočių per visą sistemos gyvavimo laikotarpį.
+	        \end{itemize}
+	      \item Metodika
+	        \begin{itemize}
+	          \item Modeliavimas, sisteminė analizė. Modeliuojamos yra užduotys, kurios yra perkeliamos iš standartinio įgyvendinimo iki MapReduce programavimo modelio įgyvendinimo. Sistemos analizė vykdoma pateikus detalius žingsnius kaip skaičiavimas yra vykdomas tarp skirtingų sistemos mazgų.
+	        \end{itemize}
+	      \item Nuoseklumas
+	        \begin{itemize}
+	          \item Pradedama nuo metodo aprašymo, tuomet keliamasi į bendrą algoritmo įgyvendinimą, aptariami galimi nesėkmių atvejai. Pateikiami realių problemų sprendimų pavyzdžiai. Supažindinama su jau esamu įgyvendinimu, pateikiami realūs skaičiavimų rezultatai.
+	        \end{itemize}
+	      \item Problema, tikslas, uždaviniai, išvados
+	        \begin{itemize}
+	          \item Iškelti uždaviniai išspręsti, detaliai išnagrinėjus kiekvieną iš jų.
+	        \end{itemize}
+	      \item Bloomo taksonomija
+	        \begin{itemize}
+	          \item Pasiekiamas Veiksmų plano lygmens. Straipsnis pradžioje labai trumpai pateikia informacija apie programavimo modelį, sujungia vienos programavimo kalbos vykdymo unikalumą, modelis perkeliamas didesniam masteliui.
+	        \end{itemize}
+	      \item Stilius
+	        \begin{itemize}
+	          \item Darbo stilius yra nuoseklus ir suprantamas kiekvieno, kas tik yra susidūręs su IT pobūdžio straipsniais
+	        \end{itemize}
+	      \item Literatūra
+	        \begin{itemize}
+	          \item Literatūros sąrašas stiprus. Cituojamai ACM, IEEE straipsniai, konferencijų prezentacijos.
+	        \end{itemize}
+	    \end{itemize}
+
+	\section{Išvados}
+
+		\begin{itemize}
+	      \item Sėkmingas modelio panaudojimas Google sistemose (\textit{MapReduce programming model has neem successfully used at Google for many different purposes})
+	      \item Lengvas modelio panaudojimas (\textit{The model is easy to use, even for programmers without experience with parallel and distributed systems})
+	      \item Platus problemų sąrašas yra lengvai aprašomas per MapRecude skaičiavimus (\textit{a large vriaty of problems are easily expressible as MapReduce compuations})
+	      \item MapReduce algoritmo įgyvendinimas, kuris lengvai paskirstomas tarp tūkstančių skaičiavimo taškų (\textit{An implementation of MapReduce that scales to large clusters of machines comprising thousands of machines})
+	      \item Griežtas programavimo modelis leidžia lengviau skirstyti skaičiavimus tarp mašinų (\textit{Restricting the programming model makes it easy to parallelize and distribute computations and to make such computations fault-tolerant})
+	      \item Tinklo pralaidumas yra esminė problema (\textit{the locality optimization allows us to read data from local disks, and writing a single compy of the intermediate data to local disk saves network bandwidth})
+	    \end{itemize}
+
+		Straipsnis ``MapReduce: Simplified Data Processing on Large Clusters'', kurių autoriai Jeffrey Dean ir Sanjay Ghemawat, detaliai išanalizuotas. Pateikta analizuojama problema, darbo tikslas bei sąrašas uždavinių. Visi iškelti uždaviniai straipsnyje sėkmingai įvykdyti. Išvadose sekanti informacija yra pagrindžiama. Iš vertinimo požiūrio straipsnis yra vienas iš pavyzdinių. 
+
+
+\end{document}
