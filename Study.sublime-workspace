@@ -152,10 +152,18 @@
 	"buffers":
 	[
 		{
-			"file": "Modernios_informacines_sistemos/Pratybos/1_dalis/main.tex",
+			"file": "Duomenu_inzinerija/Laboratoriniai/lab_01/main.tex",
 			"settings":
 			{
-				"buffer_size": 20959,
+				"buffer_size": 403,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Modernios_informacines_sistemos/Projektas/Referatas/main.tex",
+			"settings":
+			{
+				"buffer_size": 7852,
 				"line_ending": "Unix"
 			}
 		}
@@ -192,6 +200,12 @@
 	},
 	"file_history":
 	[
+		"/home/maksim/Studies/Duomenu_inzinerija/Laboratoriniai/lab_02/main.tex",
+		"/home/maksim/Studies/Duomenu_inzinerija/Laboratoriniai/lab_03/main.tex",
+		"/home/maksim/Studies/Duomenu_inzinerija/Laboratoriniai/lab_04/main.tex",
+		"/home/maksim/Studies/Duomenu_inzinerija/Laboratoriniai/lab_05/main.tex",
+		"/home/maksim/Studies/Duomenu_inzinerija/Projektas/main.tex",
+		"/home/maksim/Studies/Modernios_informacines_sistemos/Pratybos/1_dalis/main.tex",
 		"/home/maksim/Studies/Modernios_informacines_sistemos/Pratybos/2_dalis/main.tex",
 		"/home/maksim/Studies/Modernios_informacines_sistemos/Projektas/Prezentacija/references.bib",
 		"/home/maksim/Studies/Modernios_informacines_sistemos/Projektas/Prezentacija/main.tex",
@@ -317,35 +331,61 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Modernios_informacines_sistemos/Pratybos/1_dalis/main.tex",
+					"file": "Duomenu_inzinerija/Laboratoriniai/lab_01/main.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 20959,
+						"buffer_size": 403,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								20248,
-								20248
+								403,
+								403
 							]
 						],
 						"settings":
 						{
 							"spell_check": true,
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 6714.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Modernios_informacines_sistemos/Projektas/Referatas/main.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7852,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 255.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -723,6 +763,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"pn",
+				"~/Work/Pineapple/Pineapple.sublime-project"
+			],
 			[
 				"pine",
 				"~/Work/Pineapple/Pineapple.sublime-project"

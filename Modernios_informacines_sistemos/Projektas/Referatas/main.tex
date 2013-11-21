@@ -84,7 +84,7 @@
 			\label{lst:mapreduce}
 		\end{figure}
 
-		Į įėjimą paduosime sakinius, kur \textit{key} bus eilutės numeris, o \textit{value} bus pats sakinys. Sakinys yra suskaldomas po vieną žodį ciklo metu ir suformuojamas nauji duomenys, kur \textit{key} yra pats žodis, o \textit{value} priskiriamas 1. Taip iš pirmo \textit{datanode} ateis 
+		Į įėjimą paduosime sakinius, kur \textit{key} bus eilutės numeris, o \textit{value} bus pats sakinys. Sakinys yra suskaldomas po vieną žodį ciklo metu ir suformuojamas nauji duomenys, kur \textit{key} yra pats žodis, o \textit{value} priskiriamas 1. Taip iš pirmo \textit{datanode} ateis
 
 		\begin{itemize}
 			\item $<Hello,~1>$
@@ -110,7 +110,7 @@
 			\item $<Bye,~1>$
 		\end{itemize}
 
-		Iš antro 
+		Iš antro
 
 		\begin{itemize}
 			\item $<Hello,~1>$
@@ -134,7 +134,7 @@
 
 		Nėra jokios aukšto lygio programavimo kalbos, kuri tiesiai išsiverstų į MapReduce tipo modelį, kaip pavyzdžiui SQL DBMS atveju \cite{lee2012parallel}. Nėra jokio optimizacijos mechanizmo efektyviai išnaudoti užklausas. Dirbantis programuotojas turi nuolat galvoti tik \textit{map} ir \textit{reduce} principais, kas yra labai varžantis aspektas.
 
-		Nėra jokios schemos ir jokių indeksų. MapReduce procesas yra iškarto pradedamas, kai tik duomenys yra užkraunami į atmintį. Jokio duomenų modeliavimo principo čia pritaikyti nėra vietos. MapReduce reikalauja kaskart išnagrinėti įėjimą, išskaityti ir sukurti duomenų objektus. Toks procesas sukelia įvykdymo efektyvumo degeneraciją \cite{pavlo2009comparison}. 
+		Nėra jokios schemos ir jokių indeksų. MapReduce procesas yra iškarto pradedamas, kai tik duomenys yra užkraunami į atmintį. Jokio duomenų modeliavimo principo čia pritaikyti nėra vietos. MapReduce reikalauja kaskart išnagrinėti įėjimą, išskaityti ir sukurti duomenų objektus. Toks procesas sukelia įvykdymo efektyvumo degeneraciją \cite{pavlo2009comparison}.
 
 		Labai žemas efektyvumas. MapReduce buvo kurtas, sprendžiant dvi pagrindines kylančias problemas su didelio mąsto skaičiavimais:
 
@@ -145,7 +145,7 @@
 
 		Esant tokiems tikslams, MapReduce nėra labai efektyvus I/O atveju. Map ir Reduce operacijos yra blokuojančio tipo. Reduce negali pradėti savo darbo tol, kol nėra baigta map operacija. Taip pat neegzistuoja jokios darbo planavimo strategijos.
 
-		Turint tiek daug neišspręstų problemų iš MapReduce pusės, atsirado projektai, kurių tikslas yra jas išspręsti. 
+		Turint tiek daug neišspręstų problemų iš MapReduce pusės, atsirado projektai, kurių tikslas yra jas išspręsti.
 
 	\section{MapReduce aukštesnio lygio kalbos}
 
@@ -160,7 +160,7 @@
 
 		\subsection{Hive}
 
-			% TODO
+			
 
 		\subsection{Pig}
 
