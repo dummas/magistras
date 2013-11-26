@@ -151,22 +151,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "Duomenu_inzinerija/Laboratoriniai/lab_01/main.tex",
-			"settings":
-			{
-				"buffer_size": 403,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Modernios_informacines_sistemos/Projektas/Referatas/main.tex",
-			"settings":
-			{
-				"buffer_size": 7852,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -183,11 +167,7 @@
 	},
 	"console":
 	{
-		"height": 160.0,
-		"history":
-		[
-			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
-		]
+		"height": 160.0
 	},
 	"distraction_free":
 	{
@@ -200,6 +180,8 @@
 	},
 	"file_history":
 	[
+		"/Users/maksimnorkin/Documents/Studies/Duomenu_inzinerija/Laboratoriniai/lab_01/main.tex",
+		"/Users/maksimnorkin/Documents/Studies/Modernios_informacines_sistemos/Projektas/Referatas/main.tex",
 		"/home/maksim/Studies/Duomenu_inzinerija/Laboratoriniai/lab_02/main.tex",
 		"/home/maksim/Studies/Duomenu_inzinerija/Laboratoriniai/lab_03/main.tex",
 		"/home/maksim/Studies/Duomenu_inzinerija/Laboratoriniai/lab_04/main.tex",
@@ -331,65 +313,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "Duomenu_inzinerija/Laboratoriniai/lab_01/main.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 403,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								403,
-								403
-							]
-						],
-						"settings":
-						{
-							"spell_check": true,
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Modernios_informacines_sistemos/Projektas/Referatas/main.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7852,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 255.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -428,7 +353,6 @@
 	{
 		"height": 0.0
 	},
-	"project": "Study.sublime-project",
 	"replace":
 	{
 		"height": 48.0
@@ -774,24 +698,10 @@
 		],
 		"width": 380.0
 	},
-	"select_symbol":
-	{
-		"height": 0.0,
-		"selected_items":
-		[
-		],
-		"width": 0.0
-	},
-	"settings":
-	{
-	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 322.0,
-	"status_bar_visible": true,
-	"template_settings":
-	{
-	}
+	"status_bar_visible": true
 }
