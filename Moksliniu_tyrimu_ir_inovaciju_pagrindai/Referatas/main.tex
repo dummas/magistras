@@ -12,7 +12,8 @@
 }
 
 \author{Maksim Norkin, ISIfm-13\\ \texttt{maksim.norkin@ieee.org}}
-\title{MapReduce: Simplified Data Processing on Large Clusters}
+\title{Jeffrey Dean, Sanjay Ghemwat\\MapReduce: Simplified Data Processing on Large Clusters}
+\date{\today}
 
 \begin{document}
 
@@ -20,9 +21,9 @@
 
 	\section{Problema}
 
-		Darbe analizuojama problema yra paskirstytų skaičiavimų įgyvendinimo įvairumas. Kiekvienas programuotojas gali įvairiai įgyvendinti savo pasirinktos problemos skaičiavimo mechanizmą. Prieš pradėdamas skaičiavimo operacijas, programuotojas turi pirmiausiai įvertinti kaip skaičiavimai bus paskirstyti tarp sistemų, kas nutinka, kuomet vienas skaičiavimas yra nutraukiamas, tačiau kiti skaičiavimai vykdomi toliau, kaip paskirstyti pačius duomenis tarp atskirų mazgų ir galiausiai kaip tai įvykdyti kuo greičiau. 
+		Darbe analizuojama problema yra paskirstytų skaičiavimų įgyvendinimo įvairumas. Kiekvienas programuotojas gali įvairiai įgyvendinti savo pasirinktos problemos skaičiavimo mechanizmą. Prieš pradėdamas skaičiavimo operacijas, programuotojas turi pirmiausiai įvertinti kaip skaičiavimai bus paskirstyti tarp sistemų, kas nutinka, kuomet vienas skaičiavimas yra nutraukiamas, tačiau kiti skaičiavimai vykdomi toliau, kaip paskirstyti pačius duomenis tarp atskirų mazgų ir galiausiai kaip tai įvykdyti kuo greičiau.
 
-		Straipsnyje yra pateikiamas programavimo modelis ir pati metodika, kuri leidžia programuotojui iškarto aprašyti skaičiavimo algoritmą ir visiškai negalvoti apie prieš tai išvardintas problemas. 
+		Koks programavimo modelis ir metodika, kuri leidžia programuotojui iškarto aprašyti skaičiavimo algoritmą ir visiškai negalvoti apie prieš tai išvardintas problemas?
 
 	\section{Darbo tikslas}
 
@@ -44,11 +45,13 @@
 		\begin{itemize}
 		\item Turinys ir pavadinimas
 	        \begin{itemize}
-	          \item Straipsnio pavadinimas tiesiogiai atitinka straipsnio turinį. Straipsnyje taip pat detaliai yra aprašomi taikymo pavyzdžiai.
+	          \item Straipsnio pavadinimas yra ``MapReduce: Simplified Data Processing on Large Clusters''. Tai yra metodą pristatomasis straipsnis, kurio pavadinimas yra pats pirmas straipsnio pavadinimo žodis. Toliau yra pabrėžiama to metodo pagrindinis tikslas. Turinys turi žengti pagal tokią pačią tvarką.
+	          Turinys pradedamas nuo įžangos į problemą, toliau yra pateikiamas programavimo modelis, kartu su pavyzdžiais. Toliau seka pačios metodikos įgyvendinimo aprašymas. Tęsiama jos tobulinimo diskusija, pateikiami greitaveikos matavimo rezultatai. Straipsniui baigiantis, aprašoma kaip būtent duota metodika yra įgyvendinta Google sistemose.
+	          Straipsnio pavadinimas tiesiogiai atitinka straipsnio turinį.
 	        \end{itemize}
 	      \item Aktualumas
 	        \begin{itemize}
-	          \item Analizuojama problema yra labai aktuali. Kiekvieną dieną generuojamų duomenų kiekis didėja. Kompiuterio spartumas nespėja vyktis duomenų skaičiaus, todėl reikia ieškoti sprendimų kaip galima apdoroti didelius tera-baitinius duomenų kiekius. Šiuo metu tokios sistemos atviro kodo įgyvendinimą naudoja dauguma didelių kompanijų ir vos ne kiekvienas Sicilio slėnyje esantis start-up'as.
+	          \item Kiekvieną dieną generuojamų duomenų kiekis didėja. Kompiuterio spartumas nespėja vytis duomenų skaičiaus, todėl reikia ieškoti sprendimų kaip galima apdoroti didelius tera-baitinius duomenų kiekius. Šiuo metu tokios sistemos atviro kodo įgyvendinimą naudoja dauguma didelių kompanijų ir vos ne kiekvienas Sicilio slėnyje esantis start-up'as. Analizuojama problema yra labai aktuali.
 	        \end{itemize}
 	      \item Argumentavimas
 	        \begin{itemize}
@@ -64,7 +67,7 @@
 	        \end{itemize}
 	      \item Problema, tikslas, uždaviniai, išvados
 	        \begin{itemize}
-	          \item Iškelti uždaviniai išspręsti, detaliai išnagrinėjus kiekvieną iš jų.
+	          \item Kiekvienas iškeltas uždavinys straipsnio pradžioje buvo išspręstas struktūriškai kiekvieno uždavinio sprendimą pateikiant atskirame paragrafe. Iškelti uždaviniai išspręsti.
 	        \end{itemize}
 	      \item Bloomo taksonomija
 	        \begin{itemize}
@@ -76,22 +79,22 @@
 	        \end{itemize}
 	      \item Literatūra
 	        \begin{itemize}
-	          \item Literatūros sąrašas stiprus. Cituojamai ACM, IEEE straipsniai, konferencijų prezentacijos.
+	          \item Cituojamai ACM, IEEE straipsniai, konferencijų pateiktys. Literatūros sąrašas stiprus
 	        \end{itemize}
 	    \end{itemize}
 
 	\section{Išvados}
 
 		\begin{itemize}
-	      \item Sėkmingas modelio panaudojimas Google sistemose (\textit{MapReduce programming model has neem successfully used at Google for many different purposes})
-	      \item Lengvas modelio panaudojimas (\textit{The model is easy to use, even for programmers without experience with parallel and distributed systems})
-	      \item Platus problemų sąrašas yra lengvai aprašomas per MapRecude skaičiavimus (\textit{a large vriaty of problems are easily expressible as MapReduce compuations})
-	      \item MapReduce algoritmo įgyvendinimas, kuris lengvai paskirstomas tarp tūkstančių skaičiavimo taškų (\textit{An implementation of MapReduce that scales to large clusters of machines comprising thousands of machines})
-	      \item Griežtas programavimo modelis leidžia lengviau skirstyti skaičiavimus tarp mašinų (\textit{Restricting the programming model makes it easy to parallelize and distribute computations and to make such computations fault-tolerant})
-	      \item Tinklo pralaidumas yra esminė problema (\textit{the locality optimization allows us to read data from local disks, and writing a single compy of the intermediate data to local disk saves network bandwidth})
+	      \item Sėkmingas modelio panaudojimas Google sistemose (angl. \textit{MapReduce programming model has neem successfully used at Google for many different purposes})
+	      \item Lengvas modelio panaudojimas (angl. \textit{The model is easy to use, even for programmers without experience with parallel and distributed systems})
+	      \item Platus problemų sąrašas yra lengvai aprašomas per MapRecude skaičiavimus (angl. \textit{a large vriaty of problems are easily expressible as MapReduce compuations})
+	      \item MapReduce algoritmo įgyvendinimas, kuris lengvai paskirstomas tarp tūkstančių skaičiavimo taškų (angl. \textit{An implementation of MapReduce that scales to large clusters of machines comprising thousands of machines})
+	      \item Griežtas programavimo modelis leidžia lengviau skirstyti skaičiavimus tarp mašinų (angl. \textit{Restricting the programming model makes it easy to parallelize and distribute computations and to make such computations fault-tolerant})
+	      \item Tinklo pralaidumas yra esminė problema (angl. \textit{the locality optimization allows us to read data from local disks, and writing a single compy of the intermediate data to local disk saves network bandwidth})
 	    \end{itemize}
 
-		Straipsnis ``MapReduce: Simplified Data Processing on Large Clusters'', kurių autoriai Jeffrey Dean ir Sanjay Ghemawat, detaliai išanalizuotas. Pateikta analizuojama problema, darbo tikslas bei sąrašas uždavinių. Visi iškelti uždaviniai straipsnyje sėkmingai įvykdyti. Išvadose sekanti informacija yra pagrindžiama. Iš vertinimo požiūrio straipsnis yra vienas iš pavyzdinių. 
+		Straipsnis ``MapReduce: Simplified Data Processing on Large Clusters'', kurių autoriai Jeffrey Dean ir Sanjay Ghemawat, detaliai išanalizuotas. Pateikta analizuojama problema, darbo tikslas bei sąrašas uždavinių. Visi iškelti uždaviniai straipsnyje išspręsti. 
 
 
 \end{document}

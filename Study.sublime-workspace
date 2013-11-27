@@ -151,13 +151,25 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Moksliniu_tyrimu_ir_inovaciju_pagrindai/Referatas/main.tex",
+			"settings":
+			{
+				"buffer_size": 6948,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 47.0,
 		"selected_items":
 		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -167,7 +179,7 @@
 	},
 	"console":
 	{
-		"height": 160.0
+		"height": 371.0
 	},
 	"distraction_free":
 	{
@@ -180,6 +192,9 @@
 	},
 	"file_history":
 	[
+		"/Users/maksimnorkin/Documents/Studies/Moksliniu_tyrimu_ir_inovaciju_pagrindai/Referatas/main.tex",
+		"/Users/maksimnorkin/Documents/Studies/Modernios_informacines_sistemos/Projektas/Prezentacija/main.tex",
+		"/Users/maksimnorkin/Documents/Studies/Duomenu_inzinerija/Projektas/main.tex",
 		"/Users/maksimnorkin/Documents/Studies/Duomenu_inzinerija/Laboratoriniai/lab_01/main.tex",
 		"/Users/maksimnorkin/Documents/Studies/Modernios_informacines_sistemos/Projektas/Referatas/main.tex",
 		"/home/maksim/Studies/Duomenu_inzinerija/Laboratoriniai/lab_02/main.tex",
@@ -313,8 +328,36 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Moksliniu_tyrimu_ir_inovaciju_pagrindai/Referatas/main.tex",
+					"settings":
+					{
+						"buffer_size": 6948,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2552,
+								2552
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 669.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
