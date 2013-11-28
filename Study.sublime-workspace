@@ -152,10 +152,26 @@
 	"buffers":
 	[
 		{
-			"file": "Moksliniu_tyrimu_ir_inovaciju_pagrindai/Referatas/main.tex",
+			"file": "Baigiamasis_darbas/main.tex",
 			"settings":
 			{
-				"buffer_size": 6948,
+				"buffer_size": 360,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Modernios_informacines_sistemos/Projektas/Referatas/main.tex",
+			"settings":
+			{
+				"buffer_size": 7843,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Duomenu_inzinerija/Projektas/main.tex",
+			"settings":
+			{
+				"buffer_size": 1205,
 				"line_ending": "Unix"
 			}
 		}
@@ -328,23 +344,50 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Moksliniu_tyrimu_ir_inovaciju_pagrindai/Referatas/main.tex",
+					"file": "Baigiamasis_darbas/main.tex",
 					"settings":
 					{
-						"buffer_size": 6948,
+						"buffer_size": 360,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2552,
-								2552
+								258,
+								258
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Modernios_informacines_sistemos/Projektas/Referatas/main.tex",
+					"settings":
+					{
+						"buffer_size": 7843,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -353,7 +396,33 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 669.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Duomenu_inzinerija/Projektas/main.tex",
+					"settings":
+					{
+						"buffer_size": 1205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1189,
+								1189
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 297.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -744,7 +813,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 322.0,
 	"status_bar_visible": true
 }
