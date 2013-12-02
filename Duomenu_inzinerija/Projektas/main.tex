@@ -20,7 +20,46 @@
 
 	\section{Įžanga}
 
-		Programų inžinerijoje, projektavimo šablonas yra bendras, daug kartų naudojamas sprendimas nuolat kylančiai problemai išspręsti. Projektavimo šablonas nėra galutinis programinės įrangos sprendimas. Tai yra šablonas arba aprašymas kaip galima išspręsti kažkokią problemą skirtingose situacijose. Šablonus galima pervadinti į sprendimų rinkinius, kurie yra išgryninti programuotojų bendruomenės ir sąlygoja geriausią sprendimą. Objektiškai orientuoti projektavimo šablonai dažniausiai nurodo susiejimus ir sąveikas tarp klasių arba objektų, nesileidžiant į galutinių objektų ar klasių aprašymo. Daugelis šablonų įgyvendina objektiškai orientuotą arba paveldimą būseną, todėl jie gali būti neįmanomi pritaikyti funkciniame programavime. % paskutinio sakinio pabaigą reikia papildyti
+		Programų inžinerijoje, projektavimo šablonas yra bendras, daug kartų naudojamas sprendimas nuolat kylančiai problemai išspręsti. Projektavimo šablonas nėra galutinis programinės įrangos sprendimas. Tai yra šablonas arba aprašymas kaip galima išspręsti kažkokią problemą skirtingose situacijose. Šablonus galima pervadinti į sprendimų rinkinius, kurie yra išgryninti programuotojų bendruomenės ir sąlygoja geriausią sprendimą. Objektiškai orientuoti projektavimo šablonai dažniausiai nurodo susiejimus ir sąveikas tarp klasių arba objektų, nesileidžiant į galutinių objektų ar klasių aprašymo. Daugelis šablonų įgyvendina objektiškai orientuotą arba paveldimą būseną, todėl jie gali būti neįmanomi pritaikyti funkciniame programavime. 
+
+		Projektavimo šablonai priklauso modulių ir sujungimų srityje. Aukštesniam lygmenyje yra naudojami architektūriniai šablonai, kurie dažniausiai nusako bendrą šabloną, kurio privalo laikytis visa likusi sistema.
+
+		Egzistuoja labai daug projektavimo šablonų, pavyzdžiui:
+
+		\begin{itemize}
+			\item Algoritminės strategijos šablonai, kurie nusako galimus sprendimus, kurie yra susiję su aukšto lygio strategijomis -- kaip išnaudoti programos charakteristikas skaičiavimo mašinoje.
+			\item Skaičiuojamieji projektavimo šablonai, kurie nusako svarbiausius skaičiavimo proceso vietas.
+			\item Paleidimo šablonas, nusako programos paleidimo palaikymą, įtraukiant strategijas, kurios nusako kaip paleisti programinės sistemos srautus, taip remiant užduočių sinchronizavimą.
+			\item Įgyvendinimo strategijos šablonai, nusako kaip galima pateikti programinį kodą programos organizavimui ir bendrus duomenų tipus, konkrečiai lygiagrečiam programavimui.
+			\item Struktūriniai projektavimo šablonai, nusako kaip galima įvykdyti aukšto lygio struktūras programos kūrimo metu.
+		\end{itemize}
+
+	\section{Istorija}
+
+		Šablonai atsirado kaip architektūrinė idėją, kurią pristatė Christopher Alexander. 1987 metais, Kent Beck ir Ward Cunningham pradėjo idėjos eksportavimą į kitas šakas, tarp kurių ir programavimas. Savo darbo rezultatus Jie paskelbė OOPSLA konferencijoje tais pačiais metais. Vėlesniais metais, jų darbas buvo tęsiamas toliau.
+
+		Projektavimo šablonai gavo labai didelį populiarumą kompiuterių moksle, kai 1994 buvo išleista knyga ``Design Patterns: Elements of Reusable Object-Oriented Software'', kurių autoriai yra ``Gang of Four'' (Gamma et al.), kurie dažniausiai yra trumpinami iki ``GOF''. Tais pačiais metais, buvo surengta pirmoji \textit{Pattern Languages of Programming} konferencija. Sekančiais metais, buvo įsteigta \textit{Portland Pattern Repository}, kurios paskirtis buvo projektavimo šablonų dokumentavimas. 
+
+		Turint omenyje, kad projektavimo šablonai buvo taikomi praktikoje labai ilgą laiką, formalus jų aprašymas yra nyksta jau keletas metų.
+
+		Tik 2009, Tomas Erl kartu su 30 inžinierių vieningomis jėgomis išleido knygą ``SOA Design Patterns'', kurios tikslas buvo nustatyti \textit{de facto} projektavimo šablonų apibūdinimus SOA ir paslaugų tipo sprendimams.
+
+	\section{Praktika}
+
+		Projektavimo šablonai gali labai paspartinti darbo procesą, pateikdami išbandytus, įrodytus projektavimo pavyzdžius. Efektyvus programinio paketo šablonas reikalauja turėti omenyje problemas, kurios gali nepasirodyti iki tada, kai žymi darbo dalis jau bus atlikta. Projektavimo šablonų pakartotinis taikymas leidžia išvengti subtilių problemų, kurios gali peraugti į dideles problemas. Taip pat yra pagerinamas kodo skaitymas programuotojams ir architektams, kurie jau turi projektavimo šablonų žinių.
+
+		Projektavimo šablonai dažniausiai įveda papildomus netiesioginius lygius, kuomet reikia lankstumo. Kai kuriais atvejais tai gali sukelti atlikimo spartos sumažėjimą.
+
+		Remiantis projektavimo šablono sąvoka, projektavimo šablonai turi būti iš naujo realizuojami kiekvienoje naujoje situacijoje. Kai kurie autoriai nusprendė, kad toks darbo pobūdis yra žingsnis atgal nuo pakartotinio programinio kodo panaudojimo, kaip yra daroma modulinio programavimo atveju, projektavimo šablonai buvo perdaryti moduliniu pagrindu. Meyer ir Arnout sugebėjo panaudoti arba pilną, arba dalinį komponentų panaudojimą, tais projektavimo atvejais, kuriais jie taikė projektavimo šablonus.
+
+	\section{Klasifikavimas}
+
+		Pradžioje projektavimo šablonai buvo sugrupuoti į kategorijas: kūrimo šablonai, struktūriniai šablonai ir elgesio šablonai. 
+
+		\begin{itemize}
+			\item \textit{Abstract factory} -- sukuria sąsaja panašios šeimos ar susijusių objektų, jų priklausomybių kūrimui, nenusakant tiksliai visų reikalavimų.
+			\item \textit{Builder} -- 
+		\end{itemize}
 
 		
 
