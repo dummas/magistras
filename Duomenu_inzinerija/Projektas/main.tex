@@ -56,11 +56,94 @@
 
 		Pradžioje projektavimo šablonai buvo sugrupuoti į kategorijas: kūrimo šablonai, struktūriniai šablonai ir elgesio šablonai. 
 
+		\subsection{Kūrimo šablonai}
+
+			\begin{itemize}
+				\item \textit{Abstract factory} -- sukuria sąsaja panašios šeimos ar susijusių objektų, jų priklausomybių kūrimui, nenusakant tiksliai visų reikalavimų.
+				\item \textit{Builder} -- sudėtingo konstruktoriaus atskyrimas nuo jo pateikimo, leidžiant skirtingus objektus kurti su tuo pačiu konstruktoriumi.
+				\item \textit{Factory method} -- objektų kūrimo sąsajos įgyvendinimas, kur dukterinė klasė nusprendžia kokia klasė yra paveldima.
+				\item \textit{Lazy initialization} -- taktinis objekto kūrimo, sudėtingo skaičiavimo ar kito sudėtingo proceso paleidimo užlaikymas iki tada, kai jo prireikia.
+				\item \textit{Multiton} -- klasės baigtinių egzempliorių užtikrinimas ir globalus jų priėjimas.
+				\item \textit{Object pool} -- šablonas nusako, kaip elgtis norint išvengti sudėtingų išteklių priskyrimų ir paleidimo, kuomet jie nėra reikalingi.
+				\item \textit{Prototype} -- nusakoma kokio tipo objektus sukurti, naudojantis prototipo egzemplioriumi. Taip pat galima klonuoti objektus, kopijuojant esamą prototipo egzempliorių.
+				\item \textit{Resource acquisition} -- šablonas užtikrina resursų atlaisvinimu, kuomet jie nėra reikalingi, surišdamas juos su objektų gyvavimo trukme.
+				\item \textit{Singleton} -- vieno objekto egzemplioriaus užtikrinimas. Taip pat pridedamas globalus priėjimas prie duoto objekto.
+			\end{itemize}
+
+		\subsection{Struktūriniai šablonai}
+
+			\begin{itemize}
+				\item \textit{Adapter} -- sąsajos konvertavimas iš vienos, kurios klientas nesupranta, į tą, kurią jis supranta. Adapteris leidžia objektams bendrauti kartu, kas būtų neįmanoma dėl nesutampančių sąsajų.
+				\item \textit{Bridge} -- abstrakcijos priklausomybių (angl. \textit{decoupling}) atskyrimas nuo jos realizacijos, taip sudarant lankstumo sąlygas.
+				\item \textit{Composite} -- objektų sudarymas į medžio šakas, siekiant pateikti atskiro modulio ar visos sistemos hierarchiją. \textit{Composite} leidžia klientams vienodai elgtis tiek su vienu objektu, tiek su objekto medžiu.
+				\item \textit{Decorator} -- dinaminis papildomos atsakomybės priskyrimas prie objekto, paliekant tą pačią sąsają. \textit{Decorator} yra labai gera alternatyva klasės paveldėjimui.
+				\item \textit{Facade} -- subendrintos sąsajos pateikimas sąsajų grupės posistemei. \textit{Facade} apibrėžia aukšto lygio sąsają, kuri leidžia lengvai naudotis posisteme.
+				\item \textit{Flyweight} -- efektyvus panašių objektų dalinimas tarp sistemos.
+				\item \textit{Front Controller} -- centralizuoto įrašo pateikimas, apdorojant užklausas.
+				\item \textit{Module} -- grupė susijusių elementų: klasės, singleton'ai, metodai, naudojami globaliai, iš vieno bendro taško.
+				\item \textit{Proxy} -- pakaitalo ar rezervato patekimas objekto kontrolei.
+			\end{itemize}
+
+		\subsection{Elgesio šablonai}
+
+			\begin{itemize}
+				\item \textit{Blackboard} -- daugelio rašytojų/skaitytojų suteikimas, subendrinant stebėtoją. Duomenų perdavimas atliekamas visos sistemos atžvilgiu.
+				\item \textit{Chain of responsibility} -- Vengimas siuntimą priskirti kažkokiam vienam objektui. Keliama galimybė keliems objektams apdoroti ateinančią informaciją.
+				\item \textit{Command} -- užklausos yra pateikiamos kaip uždari objektai, kas leidžia klientams pateikti skirtingas užklausas, eiles ar žurnalą.
+				\item \textit{Interpreter} -- turint kalbą, apibūdinti jos žodyną kartu su interpretatoriumi, kuris naudoja žodyną ir supranta kalbos sakinius.
+				\item \textit{Iterator} -- pateikti sprendimą, kaip galima pateikti visus esamo objekto elementus, nesigilinant į objekto vidinę struktūrą.
+				\item \textit{Mediator} -- nurodyti objektą, kuris reguliuoja kaip objektų grupę tarpusavyje sąveikauja. \textit{Mediator} skatina laisvą jungimą, taip išvengiant tiesioginį vieno objekto priklausomybę nuo kito objekto, kurie priklauso \textit{mediator} objektui. 
+				\item \textit{Memento} -- leidimas objekto būsenos atstatymui uždelstam laike, nepažeidžiant objekto priklausomybių.
+				\item \textit{Null object} -- null tipo vengimas, priskiriant reikšmę kūrimo metu.
+				\item \textit{Observer} -- apibūdinti vienas-daugelis sąryšį, kur vieno objekto atnaujinimas skatina jam priklausančių objektų automatinį atnaujinimą.
+				\item \textit{Servant} -- objektų grupės bendro funkcionalumo aprašymas.
+				\item \textit{Specification} -- loginiais ryšiais jungiama verslo logika.
+				\item \textit{State} -- leidimas objektui keisti jo elgesį, pasikeitus jo vidiniai būsenai. Objektas gali pakeisti savo klasę.
+				\item \textit{Strategy} -- algoritmo šeimos apibūdinimas, vieno kito paveldėjimas ir priklausomybė. \textit{Strategy} leidžia keisti algoritmus, priklausomai nuo kliento kreipinio.
+				\item \textit{Template method} -- operacijos skaldymas į dukterines klases, pradžioje aprašant tik algoritmo griaučius. Metodas leidžia dukterinėms klasėms iš naujo deklaruoti tam tikras operacijas iš naujo, nekeičiant bendro algoritmo logikos.
+				\item \textit{Visitor} -- pateikia operacijas, kurios yra įvykdomos su objekto elementais. \textit{Visitor} leidžia pateikti naują operaciją, nepakeičiant jo operuojamų elementų klases. 
+			\end{itemize}
+
+		\subsection{Lygiagretumo šablonai}
+
+			\begin{itemize}
+				\item \textit{Active Object} -- atskiria metodo iškvietimą nuo metodo kreipinio, kuris egzistuoja kontroliuojamoje šakoje. Tikslas yra pateikti lygiagretumą, naudojant asinchroninius kreipinių iškvietimą ir kontroliuojamą užklausų apdorojimą.
+				\item \textit{Balking} -- objekto operacija kviečiama tik tuomet, kai objektas yra tam tikroje būsenoje.
+				\item \textit{Binding properties} -- priverstinis savybių sinchronizavimas tarp stebėtojų, juos sujungiant.
+				\item \textit{Double-checked locking} -- lengvinamas užrakto gavimas, pirmiausia bandant uždarymo kriterijų nesaugioje būsenoje. Jeigu bandymas sėkmingas -- resursas užrakinamas. Toks šablonas gali būti nesaugus, todėl jį galima traktuoti kaip priešpriešinis šablonas.
+				\item \textit{Event-based asynchronous} -- problemų adresavimas ne sinchroniniam režime. Nutinka lygiagrečiose programose.
+				\item \textit{Guarded suspension} -- valgo veiksmus, kuriems riekia rakto ir tam tikros sąlygos, norint jas įvykdyti.
+				\item \textit{Lock} -- vienos gijos rakto uždėjimas ant tam tikro resurso. Tokiu atveju kitos gijos negali prieiti prie resurso, kol nebus paleistas raktas.
+				\item \textit{Messaging} -- leidžia informacijos perdavimą tarp sistemos modulių ir komponenčių.
+				\item \textit{Monitor object} -- objekto metodų kontroliuojamas paleidimas. Taip išvengiama kelių objekto metodų kreipinių lygiagrečioje sistemoje. 
+				\item \textit{Reactor} -- Rektoriaus objektas suteikia ne sinchroninį priėjimą prie duomenų, kai juos reikia pateikti sinchroniškai.
+				\item \textit{Read-write lock} -- suteikti galimybę skaityti iš objekto laisvai, tačiau rašymo operacijai reikalingos ypatingos teisės.
+				\item \textit{Scheduler} -- labai griežtas vienos gijos metodų paleidimas, kelių gijų skaitymo atveju.
+				\item \textit{Thread pool} -- sukuriamas tam tikras gijų skaičius, organizuotas į eilę, operacijai atlikti. Specialus \textit{Object pool} atvejis.
+				\item \textit{Thread-specific storage} -- statinės ar globalinis priėjimas prie lokalių gijos duomenų.
+			\end{itemize}
+
+	\section{Kūrimo šablonai}
+
+		Programų inžinerijoje, kūrimo šablonai yra specialūs projektavimo šablonai, kurių paskirtis yra kontroliuoti objektų sukūrimą, priklausomai nuo tam tikrų aplinkybių. Paprasčiausias objekto sukūrimas gali privesti prie projektavimo problemų ar pridėti labai daug nereikalingo kompleksiškumo. Kūrimo šablonai sprendžia šitą problemą, pateikiant kontrolės mechanizmus objekto kūrimui.
+
+		Kūrimo šablonai susideda iš dviejų pagrindinių idėjų:
 		\begin{itemize}
-			\item \textit{Abstract factory} -- sukuria sąsaja panašios šeimos ar susijusių objektų, jų priklausomybių kūrimui, nenusakant tiksliai visų reikalavimų.
-			\item \textit{Builder} -- 
+			\item Sistemos naudojamų klasių sąrašo pateikimas
+			\item Slėpti sistemos naudojamų modelių kūrimo ir jų sujungimo logiką 
+		\end{itemize}
+
+		Kūrimo šablonai gali būti suskirstyti toliau į objekto kūrimo šablonus ir klasės kūrimo šablonus. Objekto kūrimo šablonai daugiau orientuoti objektui priklausančių objektų kūrimą, o klasės kūrimo šablonai rūpinasi objekto kūrimui dukterinėse klasėse.
+
+		Penki labiausiai žinomi projektavimo šablonai yra:
+
+		\begin{itemize}
+			\item \textit{Abstract factory}
+			\item \textit{Builder}
+			\item \textit{Factory method}
+			\item \textit{Prototype}
+			\item \textit{Singleton}
 		\end{itemize}
 
 		
-
 \end{document}

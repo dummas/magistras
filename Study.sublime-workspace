@@ -151,35 +151,11 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "Baigiamasis_darbas/main.tex",
-			"settings":
-			{
-				"buffer_size": 360,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Modernios_informacines_sistemos/Projektas/Referatas/main.tex",
-			"settings":
-			{
-				"buffer_size": 7843,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Duomenu_inzinerija/Projektas/main.tex",
-			"settings":
-			{
-				"buffer_size": 1205,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 47.0,
+		"height": 375.0,
 		"selected_items":
 		[
 			[
@@ -191,11 +167,15 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 449.0
+		"width": 435.0
 	},
 	"console":
 	{
-		"height": 371.0
+		"height": 371.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
 	},
 	"distraction_free":
 	{
@@ -208,11 +188,12 @@
 	},
 	"file_history":
 	[
+		"/Users/maksimnorkin/Documents/Studies/Modernios_informacines_sistemos/Projektas/Referatas/main.tex",
+		"/Users/maksimnorkin/Documents/Studies/Baigiamasis_darbas/main.tex",
+		"/Users/maksimnorkin/Documents/Studies/Duomenu_inzinerija/Projektas/main.tex",
 		"/Users/maksimnorkin/Documents/Studies/Moksliniu_tyrimu_ir_inovaciju_pagrindai/Referatas/main.tex",
 		"/Users/maksimnorkin/Documents/Studies/Modernios_informacines_sistemos/Projektas/Prezentacija/main.tex",
-		"/Users/maksimnorkin/Documents/Studies/Duomenu_inzinerija/Projektas/main.tex",
 		"/Users/maksimnorkin/Documents/Studies/Duomenu_inzinerija/Laboratoriniai/lab_01/main.tex",
-		"/Users/maksimnorkin/Documents/Studies/Modernios_informacines_sistemos/Projektas/Referatas/main.tex",
 		"/home/maksim/Studies/Duomenu_inzinerija/Laboratoriniai/lab_02/main.tex",
 		"/home/maksim/Studies/Duomenu_inzinerija/Laboratoriniai/lab_03/main.tex",
 		"/home/maksim/Studies/Duomenu_inzinerija/Laboratoriniai/lab_04/main.tex",
@@ -344,89 +325,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "Baigiamasis_darbas/main.tex",
-					"settings":
-					{
-						"buffer_size": 360,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								258,
-								258
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Modernios_informacines_sistemos/Projektas/Referatas/main.tex",
-					"settings":
-					{
-						"buffer_size": 7843,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Duomenu_inzinerija/Projektas/main.tex",
-					"settings":
-					{
-						"buffer_size": 1205,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1189,
-								1189
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 297.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -465,6 +365,7 @@
 	{
 		"height": 0.0
 	},
+	"project": "Study.sublime-project",
 	"replace":
 	{
 		"height": 48.0
@@ -800,6 +701,14 @@
 		"selected_items":
 		[
 			[
+				"ana",
+				"~/Work/Vagrant/Anavest.sublime-project"
+			],
+			[
+				"",
+				"~/Documents/Studies/Study.sublime-project"
+			],
+			[
 				"pn",
 				"~/Work/Pineapple/Pineapple.sublime-project"
 			],
@@ -810,10 +719,24 @@
 		],
 		"width": 380.0
 	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": false,
 	"side_bar_width": 322.0,
-	"status_bar_visible": true
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
 }
