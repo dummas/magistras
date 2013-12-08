@@ -151,6 +151,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Duomenu_inzinerija/Projektas/main.tex",
+			"settings":
+			{
+				"buffer_size": 27090,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -284,7 +292,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -325,8 +333,38 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Duomenu_inzinerija/Projektas/main.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 27090,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21978,
+								21978
+							]
+						],
+						"settings":
+						{
+							"spell_check": true,
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6302.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

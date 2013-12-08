@@ -4,6 +4,8 @@
 \usepackage[L7x]{fontenc}
 \usepackage[lithuanian]{babel}
 \usepackage{listings}
+\usepackage{graphicx}
+\usepackage{epstopdf}
 
 \lstset{
 	basicstyle=\footnotesize,
@@ -125,25 +127,494 @@
 
 	\section{Kūrimo šablonai}
 
-		Programų inžinerijoje, kūrimo šablonai yra specialūs projektavimo šablonai, kurių paskirtis yra kontroliuoti objektų sukūrimą, priklausomai nuo tam tikrų aplinkybių. Paprasčiausias objekto sukūrimas gali privesti prie projektavimo problemų ar pridėti labai daug nereikalingo kompleksiškumo. Kūrimo šablonai sprendžia šitą problemą, pateikiant kontrolės mechanizmus objekto kūrimui.
+		\subsection{Kūrimo šablonas}
 
-		Kūrimo šablonai susideda iš dviejų pagrindinių idėjų:
-		\begin{itemize}
-			\item Sistemos naudojamų klasių sąrašo pateikimas
-			\item Slėpti sistemos naudojamų modelių kūrimo ir jų sujungimo logiką 
-		\end{itemize}
+			Programų inžinerijoje, kūrimo šablonai yra specialūs projektavimo šablonai, kurių paskirtis yra kontroliuoti objektų sukūrimą, priklausomai nuo tam tikrų aplinkybių. Paprasčiausias objekto sukūrimas gali privesti prie projektavimo problemų ar pridėti labai daug nereikalingo kompleksiškumo. Kūrimo šablonai sprendžia šitą problemą, pateikiant kontrolės mechanizmus objekto kūrimui.
 
-		Kūrimo šablonai gali būti suskirstyti toliau į objekto kūrimo šablonus ir klasės kūrimo šablonus. Objekto kūrimo šablonai daugiau orientuoti objektui priklausančių objektų kūrimą, o klasės kūrimo šablonai rūpinasi objekto kūrimui dukterinėse klasėse.
+			Kūrimo šablonai susideda iš dviejų pagrindinių idėjų:
+			\begin{itemize}
+				\item Sistemos naudojamų klasių sąrašo pateikimas
+				\item Slėpti sistemos naudojamų modelių kūrimo ir jų sujungimo logiką 
+			\end{itemize}
 
-		Penki labiausiai žinomi projektavimo šablonai yra:
+			Kūrimo šablonai gali būti suskirstyti toliau į objekto kūrimo šablonus ir klasės kūrimo šablonus. Objekto kūrimo šablonai daugiau orientuoti objektui priklausančių objektų kūrimą, o klasės kūrimo šablonai rūpinasi objekto kūrimui dukterinėse klasėse.
 
-		\begin{itemize}
-			\item \textit{Abstract factory}
-			\item \textit{Builder}
-			\item \textit{Factory method}
-			\item \textit{Prototype}
-			\item \textit{Singleton}
-		\end{itemize}
+			Penki labiausiai žinomi projektavimo šablonai yra:
+
+			\begin{itemize}
+				\item \textit{Abstract factory}, kuris leidžia kurti objektus, nesirūpinant objekto priklausomybėmis.
+				\item \textit{Builder} šablonas, kuris atskiria sudėtingo projekto konstrukciją nuo jo atvaizdavimo.
+				\item \textit{Factory method}, kuris leidžia nesirūpinti dukterinės klasės priklausomybėmis.
+				\item \textit{Prototype}, kuris nusako kuriamo objekto tipą per prototipą.
+				\item \textit{Singleton} šablonas, kurio uždavinys yra palaikyti tos pačios klasės vieną egzempliorių.
+			\end{itemize}
+
+
+			\subsubsection{Apibrėžimas}
+
+				Kūrimo šablonų tikslas yra atskirti sistemą nuo objekto kūrimo proceso. Jie suteikia sistemai daugiau lankstumo ir neriboja kada, kur ir kaip objektai turi būti sukurti.
+
+			\subsubsection{Naudojimas}
+
+				Šiuolaikinės programinės įrangos vystymas vis labiau priklauso nuo objektų kūrimo, negu nuo klasės paveldėjimo, apibrėžimas stumiamas toliau nuo sunkaus programavimo įpročių iki sistemos skaldymo į mažesnius objektus, kuriuos galima sudėti į vieną kompleksinį objektą. Sunkus programavimas priveda prie mažo sistemos lankstumo, kadangi tokiu atveju daugelyje vietų tenka kopijuoti tą patį kodą, kurį gal būt galima būtų panaudoti iš vienos vietos. Taip pat mažėja kodo suprantamumas, kodą tampa sunkiau pakeisti. Klaidos atveju sunkiau yra rasti kur būtent sistemoje įvyko klaida. Dėl tokių priežasčių, kūrimo šablonai yra žymiai pranašesni, už sunkaus programavimo įpročius.
+
+				Kūrimo šablonus rekomenduojama naudoti sekančiose situacijose:
+
+				\begin{itemize}
+					\item Sistema turi būti nepriklausoma nuo sistemoje dalyvaujančių objektų
+					\item Grupė objektų, kuri turi dirbti kartu
+					\item Klasės bibliotekos metodų slėpimas. Pateikti tik sąsaja su biblioteka
+					\item Skirtingų atvaizdavimų sudėtingų objektų kūrimo
+					\item Dukterinės klasės įgyvendinimas pagrindinio objekto kūrimo metu
+					\item Klasės atvaizdo formavimas veikimo metu
+					\item Tam tikros klasės vieno atvaizdo užtikrinimas
+					\item Atvaizdas turi būti plečiamas, nekeičiant pagrindinės klasės struktūros.
+				\end{itemize} 
+
+			\subsubsection{Struktūra}
+
+				Pavyzdyje \ref{fig:creational_class_pattern} yra pateikiama bendra kūrimo šablono struktūra.
+
+				Šablonas susideda:
+
+				\begin{itemize}
+					\item \textit{Creator}: sukuria objekto atvaizdą, grąžindamas objektą
+					\item \textit{ConcreteCreator}: įgyvendina objekto atvaizdą
+				\end{itemize}
+
+				\begin{figure}[t]
+					\centering
+					\includegraphics[width=160px]{diagrams/creational_pattern_class.eps}
+					\caption{Klasės kūrimo projektavimo šablono diagrama}
+					\label{fig:creational_class_pattern}
+				\end{figure}
+
+		\subsection{Abstract factory šablonas}
+
+			Abstract factory šablonas yra projektavimo šablonas, kuris leidžia apimti skirtingus objektus su skirtingais \textit{factory} į vieną objektą. Standartiniu atveju, programuotojas įgyvendina \textit{abstract factory} ir paskui naudoja bendrą sąsają objektams kurti. Tokiu atveju programuotojui nereikia žinoti specifinių reikalavimų objektui sukurti. Objektai yra sukuriami per \textit{factory}, ir būtent \textit{factory} pasirūpina objektų reikalavimais. Šablonas atskirai objekto kūrimo specifikas nuo objekto naudojimo specifikos.
+
+			\subsubsection{Apibrėžimas}
+
+				Bendrinis apibrėžimas gali būti aprašytas taip -- sąsajos suteikimas, kurios pagalba galima kurti objektus, nežinant jų kūrimo specifikos.
+
+			\subsubsection{Naudojimas}
+
+				\textit{Factory} nusako kokie būtent yra reikalavimai objekto sukūrimui ir būtent šioje vietoje objektas yra sukuriamas. Klientui yra grąžinamas to objekto abstrakti nuoroda. Taip yra išvengiama kliento pusėje kurti iš \textit{factory} metodo gražinamo objekto kopiją. Taip pat, klientas taip visiškai nežino kokie yra sukurto objekto posistemėje esantys objektai.
+
+				Per \textit{factory} sukuriamų objektų posistemės papildymas yra labai lengvas uždavinys. Klientas visiškai gali nežinoti ar sukuriamo objekto posistemės reikalavimai pasikeitė bet kokiu laiko momentu. Taip labai sumažėja laiko sąnaudos objekto modifikacijomis.
+
+			\subsubsection{Struktūra}
+
+				Šablono struktūra pateikiama \ref{fig:abstract_factory_pattern} pav. \textit{Factories} yra aprašomi visi \textit{factory methods}, kurie sukuria naujus objektus, \textit{products}.
+
+				\begin{figure}[t]
+					\centering
+					\includegraphics[width=160px]{diagrams/abstract_factory_pattern.eps}
+					\caption{Abstract factory projektavimo šablono struktūra}
+					\label{fig:abstract_factory_pattern}
+				\end{figure}
+
+		\subsection{Builder šablonas}
+
+			Šablono tikslas yra objekto kūrimo reikalavimų skaldymas į žingsnius. Taip objekto kūrimas gali būti skirtingas, priklausomai nuo praeitų žingsnių, to objekto kūrimo metu.
+
+			\subsubsection{Apibrėžimas}
+
+				\textit{Builder} šablono tikslas yra atskirti objekto pateikimą, nuo kompleksinio objekto kūrimo. Tai įgyvendinus, kiekvienas kuriamas objektas gali būti skirtingas, priklausomai nuo kūrimo proceso.
+
+			\subsubsection{Naudojimas}
+
+				Šablonas yra dažnai taikomas, kuomet egzistuoja labai panašios objektų grupės, kurios skiriasi tik tam tikrų objekto parametrų būsena.
+
+			\subsubsection{Struktūra}
+
+				Šablono struktūra pateikiama \ref{fig:builder_pattern} pav. \textit{Builder} suteikia abstrakčią sąsaja objekto kūrimui. \textit{Concrete Builder} suteikia \textit{Builder} realizaciją. Tai yra objektas, kuris geba kurti kitus objektus. 
+
+				\begin{figure}[t]
+					\centering
+					\includegraphics[width=160px]{diagrams/builder_pattern.eps}
+					\caption{Builder projektavimo šablono struktūra}
+					\label{fig:builder_pattern}
+				\end{figure}
+
+		\subsection{Factory method šablonas}
+
+			\textit{Factory method} šablonas yra objektiškai orientuotas projektavimo šablonas, kuris įgyvendina fabrikų koncepciją. Objekto sukūrimas yra labai kompleksinė operacija, kurios diegimas nėra pati paprasčiausia procedūra. Taip pat, procesas gali sudaryti galimybių, labai dažnai kartoti tą patį kodą skirtingose vietose. Gali kilti tokių situacijų, kai objekto paveldimas objektas turi priklausomybių, kurios nėra pasiekiamos iš kuriamo objekto. \textit{Factory method} šablonas sprendžia tokias problemas, apibrėžiant objekto kūrimo metodą, kuris pasirūpina visomis objekto kūrimo specifikomis. 
+
+			\subsubsection{Apibrėžimas}
+
+				\textit{Factory method} šablonas apibrėžiamas kaip objekto kūrimo sąsajos įgyvendinimas, kuris leidžia nusakyti kokia objekto klasė yra paveldima.
+
+			\subsubsection{Naudojimas}
+
+				Šablonas gali būti naudojamas:
+				\begin{itemize}
+					\item Pakartotinio sukurto objekto panaudojimui skirtingose sistemos vietose
+					\item Situacijose, kuomet objekto kūrimui reikalinga labai specifinė informacija ar informacijos šaltinis
+					\item Objekto egzistavimo laiko ribojimo centralizavimui.
+				\end{itemize}
+
+			\subsubsection{Struktūra}
+
+				Struktūra yra tokia pati, kaip ir \textit{Abstract Factory} šablono atveju. Skirtumas tik grąžinamos klasės paveldimumas.
+
+		\subsection{Lazy initialization šablonas}
+
+			\textit{Lazy initialization} šablonas yra metodika, kuomet specialiai yra delsiamas objekto kūrimas iki tol, kol to objekto prireikia kažkokio sistemos žingsnio metu. Metodika dažniausiai yra realizuojama saugant vėliavos kintamąjį, kuris nusako ar objektas buvo sukurtas ar ne. Kiekvieną kartą, kai yra kviečiamas objektas, tikrinamas vėliavos statusas. Jeigu vėliava sako, kad objektas jau yra sukurtas, grąžinamas objekto atvaizdas, jeigu objektas nebuvo sukurtas -- pradedamas objekto kūrimas.
+
+			\subsubsection{Apibrėžimas}
+
+				Objekto kūrimo specialus delsimas iki to laiko, kol objekto prireikia sistemos veikimo metu.
+
+			\subsubsection{Naudojimas}
+
+				\textit{Lazy initialization} dažniausiai naudojamas, kuomet reikia atlikti kažkokią sudėtingą operaciją, arba įvykdyti procesą, kuris reikalauja labai daug resursų.
+
+			\subsubsection{Struktūra}
+
+				Šablonas struktūros neturi.
+
+		\subsection{Multiton šablnas}
+
+			Šablonas yra labai panašus į \textit{Singleton} šabloną, kuris naudojamas vieno objekto atvaizdui sistemoje palaikyti. Skirtumas tarp dviejų šablonų yra toks, kad \textit{Singleton} saugo tik vieną klasės atvaizdą, o \textit{Multiton} saugo kelių klasių atvaizdą žemėlapyje.
+
+			Šablono pagrindinis trūkumas yra sudėtingesnis testavimas, kadangi sistemoje pateikiama globali būsena. Jeigu programavimo kalboje vyrauja šiukšlių rinkimo mechanizmas, tokia metodika gali privesti prie atminties nutekėjimo.
+
+			\subsubsection{Apibrėžimas}
+
+				Kelių vieno atvaizdo objektų saugojimas žemėlapyje.
+
+			\subsubsection{Naudojimas}
+
+				Potencialus šablono naudojimas yra pateikiamas lygiagrečiai veikiančioje sistemoje, kuomet skirtingoms gijoms reikia pateikti resursų rinkinį, kurį reikia kontroliuoti.
+
+			\subsubsection{Struktūra}
+
+				Šablonas struktūros neturi.
+
+		\subsection{Object pool šablonas}
+
+			
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Prototype šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Singleton šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+	\section{Struktūriniai šablonai}
+
+		\subsection{Adapter šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Bridge šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Composite šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Dekorator šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Facade šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Front Controller šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Flyweight šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Proxy šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+		
+	\section{Eglesio šablonai}
+
+		\subsection{Elgesio šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Chain-of-Responsibility šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Command šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Interpreter šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Interator šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Mediator šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Memento šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Null Object šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Observer šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
 
 		
+		\subsection{Publish/Subscribe šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		
+		\subsection{Servant šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Specification šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+
+		\subsection{State šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+
+		\subsection{Strategy šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		
+		\subsection{Template method šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Visitor šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+	\section{Lygiagretūs šablonai}
+
+		\subsection{Lygiagretus šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Active Object šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Balking šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Messaging šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Double-checked šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Asinchroninio metodo kreipimo šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+		
+		\subsection{Saugomas sulaikymas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Uždarymas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Stebėjimas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Reactor šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Scheduler šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
+		\subsection{Thread pool šablonas}
+
+			\subsubsection{Apibrėžimas}
+
+			\subsubsection{Naudojimas}
+
+			\subsubsection{Struktūra}
+
 \end{document}
