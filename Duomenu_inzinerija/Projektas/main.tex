@@ -294,19 +294,43 @@
 
 		\subsection{Object pool šablonas}
 
-			
+			\textit{Object pool} projektavimo šablonas, kuris sukurią objektų baseiną, kuriuos galima panaudoti bet kuriuo laiko mementu. Skirtingai, negu iškarto priskiriant sukurtus objektus prie resursų, jie yra saugomi tolimesnėms sistemos operacijoms. Klientas ištraukia iš baseino jam reikalingą objektą ir atlieka jam reikalingas operacijas. Kai klientas užbaigia operacijas su objektu, jis grąžiną jį į baseiną, vietoj to, kad jį sunaikinti.
+
+			Projektavimo šablonas gali labai sumažinti sistemos apdorojimo laiką, situacijose, kuomet objekto inicializacija užima labai daug laiko arba objekto atvaizdo formavimas užima labai daug laiko, arba kai sistema turi labai limituotą resursų skaičių. Objektas iš baseino paimamas per labai gerai spėjamą laiko intervalą, kur naujo objekto sukūrimo laikas gali būti nenuspėjamas.
+
+			Šabloną rekomenduojama taikyti tik tuomet, kai atliekamos operacijos yra brangios laiko atžvilgiu. Kitu atveju šablono naudoti nėra rekomenduojama, kadangi nereikalingas jo naudojimas gali sumažinti sistemos veikimo spartą.
 
 			\subsubsection{Apibrėžimas}
 
+				Brangių, laiko atžvilgiu, sukurtu objektų saugojimas paruošimo būsenoje, vėliau juos perduodant klientams.
+
 			\subsubsection{Naudojimas}
+
+				Dažniausiai projektavimo šablonas naudojamas:
+
+				\begin{itemize}
+					\item Jungtims su duomenų baze
+					\item Prievadų valdymui
+					\item Gijų valdymui
+					\item Dideli grafiniai objektai
+				\end{itemize}
 
 			\subsubsection{Struktūra}
 
 		\subsection{Prototype šablonas}
 
+
+
 			\subsubsection{Apibrėžimas}
 
 			\subsubsection{Naudojimas}
+
+				Projektavimo šablonas dažniausiai naudojamas
+
+				\begin{itemize}
+					\item Dukterinių klasių priklausomybės pašalinimas objekto kūrimo metu
+					\item 
+				\end{itemize}
 
 			\subsubsection{Struktūra}
 
